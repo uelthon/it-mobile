@@ -13,6 +13,7 @@ import Language from '@/components/shared/icons/language'
 import Tabs from '@/components/shared/ui/tabs'
 import { tabConstrols } from '@/constants/home-tab-control'
 import TabServices from '@/components/app/home/tab-services'
+import TabSolutions from '@/components/app/home/tab-solutions'
 
 export default function Home ({ searchParams }) {
   const tab = searchParams?.tab || 'services'
@@ -98,6 +99,7 @@ export default function Home ({ searchParams }) {
         </Tabs>
       </section>
       <TabServices tab={tab} />
+      <TabSolutions tab={tab} />
     </div>
   )
 }
