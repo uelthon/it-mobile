@@ -15,4 +15,7 @@
   .it-card{
     @apply rounded-2xl pt-7 pb-4 px-7 flex flex-col justify-start items-center text-[2.5rem] font-extrabold leading-[87%] text-center gap-4 h-[21.5rem] w-[22rem];
   }
+  .btn-it{
+    @apply w-full p-4 border-[1.3px] border-solid border-it-black-1 text-it-black-1 bg-transparent flex items-center justify-start gap-4 rounded-2xl hover:border-it-blue-1 hover:text-it-blue-1;
+  }
 }

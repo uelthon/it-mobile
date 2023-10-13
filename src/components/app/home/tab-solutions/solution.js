@@ -8,7 +8,7 @@ const Solution = ({ data = [], title = '' }) => {
       <div className='px-2 md:px-0 flex gap-4 justify-center flex-wrap'>
         {data.map(service =>
           <Card
-            key={`${title}-${service.id}`}
+            key={`solution-${title}-${service.id}`}
             content={service.content}
             image={service.img}
             title={service.title}

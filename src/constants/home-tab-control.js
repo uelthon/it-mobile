@@ -1,3 +1,14 @@
+import Car from '@/components/shared/icons/car'
+import CarLocation from '@/components/shared/icons/car-location'
+import Childrens from '@/components/shared/icons/childrens'
+import Factory from '@/components/shared/icons/factory'
+import Heart from '@/components/shared/icons/heart'
+import Home from '@/components/shared/icons/home'
+import Milk from '@/components/shared/icons/milk'
+import School from '@/components/shared/icons/school'
+import Shirt from '@/components/shared/icons/shirt'
+import Teacher from '@/components/shared/icons/teacher'
+
 export const tabConstrols = [
   {
     id: 1,
@@ -274,6 +285,75 @@ export const solutions = {
       title: 'Bug Management',
       content: 'Automatic Bug Tracking technology.',
       img: ''
+    }
+  ]
+}
+
+export const industries = {
+  none: [
+    {
+      id: 1,
+      label: 'Retailers',
+      icon: <Car />,
+      href: ''
+    },
+    {
+      id: 2,
+      label: 'Suppliers',
+      icon: <Factory />,
+      href: ''
+    },
+    {
+      id: 3,
+      label: 'Mobility Services',
+      icon: <CarLocation />,
+      href: ''
+    }
+  ],
+  consumers: [
+    {
+      id: 1,
+      label: 'Apparel, Footwear, and Accessories',
+      icon: <Shirt />,
+      href: ''
+    },
+    {
+      id: 2,
+      label: 'Health and Beauty',
+      icon: <Heart />,
+      href: ''
+    },
+    {
+      id: 3,
+      label: 'Fast-Moving Consumer Goods',
+      icon: <Milk />,
+      href: ''
+    }
+  ],
+  educations: [
+    {
+      id: 1,
+      label: 'Comprehensive Schools',
+      icon: <Home />,
+      href: ''
+    },
+    {
+      id: 2,
+      label: 'High school',
+      icon: <School />,
+      href: ''
+    },
+    {
+      id: 3,
+      label: 'Enrichment Centers',
+      icon: <Childrens />,
+      href: ''
+    },
+    {
+      id: 4,
+      label: 'Skill centers',
+      icon: <Teacher />,
+      href: ''
     }
   ]
 }
