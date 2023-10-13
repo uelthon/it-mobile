@@ -3,16 +3,29 @@ module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'it-black-1': '#1D1D1B',
+        'it-gray-3': '#A7A5A5',
+        'it-gray-2': '#575757',
+        'it-gray-1': '#303030',
+        'it-gray-sky': '#838383',
+        'it-blue-1': '#009FE3',
+        'it-red': '#FF4040',
+        'it-purple': '#7666FF',
+        'it-yellow': '#FFD500',
+        'it-gray-4': '#ECEAEA'
       },
-    },
+      fontFamily: {
+        aceh: ['var(--aceh)']
+      }
+    }
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: ['corporate']
+  }
 }

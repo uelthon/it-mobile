@@ -2,26 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .container-poly{
+    @apply px-8 py-3 bg-it-black-1 text-white;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); 
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .title{
+    @apply px-5 py-3 bg-it-black-1 text-white;
+  }
+  .it-card{
+    @apply rounded-2xl pt-7 pb-4 px-7 flex flex-col justify-start items-center text-[2.5rem] font-extrabold leading-[87%] text-center gap-4 h-[21.5rem] w-[22rem];
+  }
 }
