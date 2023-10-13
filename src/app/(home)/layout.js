@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '@/components/app/home/header'
+import Footer from '@/components/app/home/footer'
 
 export default function HomeLayout ({ children }) {
   return (
@@ -10,6 +11,7 @@ export default function HomeLayout ({ children }) {
           {children}
         </div>
       </main>
+      <Footer />
     </>
   )
 }
