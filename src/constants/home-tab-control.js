@@ -13,17 +13,17 @@ export const tabConstrols = [
   {
     id: 1,
     label: 'Services',
-    value: 'services'
+    value: '/services'
   },
   {
     id: 2,
     label: 'Solutions',
-    value: 'solutions'
+    value: '/solutions'
   },
   {
     id: 3,
     label: 'Industries',
-    value: 'industries'
+    value: '/industries'
   }
 ]
 

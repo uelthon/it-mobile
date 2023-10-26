@@ -10,10 +10,7 @@ import Email from '@/components/shared/icons/email'
 import Phone from '@/components/shared/icons/phone'
 import Whatsapp from '@/components/shared/icons/whatsapp'
 
-export default function TabServices ({ tab = '' }) {
-  if (tab !== 'services') {
-    return null
-  }
+export default function Services () {
   return (
     <section className='flex flex-col justify-start gap-7'>
       <section className='px-2 md:px-0 flex gap-4 justify-center flex-wrap'>

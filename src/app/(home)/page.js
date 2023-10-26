@@ -8,16 +8,12 @@ import Repairs from '@/components/shared/icons/repairs'
 import PlusCircle from '@/components/shared/icons/plus-circle'
 import Support from '@/components/shared/icons/support'
 import Language from '@/components/shared/icons/language'
-import Tabs from '@/components/shared/ui/tabs'
+import Tabs from '@/components/app/home/tabs'
 import { tabConstrols } from '@/constants/home-tab-control'
-import TabServices from '@/components/app/home/tab-services'
-import TabSolutions from '@/components/app/home/tab-solutions'
-import TabIndustries from '@/components/app/home/tab-industries'
 
-export default function Home ({ searchParams }) {
-  const tab = searchParams?.tab || 'services'
+export default function Home () {
   return (
-    <div className='w-full flex flex-col justify-start gap-7 py-7'>
+    <>
       <section className='flex flex-col justify-start gap-3 px-3 md:p-0'>
         <h1 className='text-[2.375rem] font-extrabold leading-[87%]'>
           Simplify IT with Our Comprehensive<br /> <span className='text-it-blue-1'>All-Inclusive</span> Subscription Plans.
@@ -85,18 +81,15 @@ export default function Home ({ searchParams }) {
           {tabConstrols.map(tabControl =>
             <Tabs.Tab
               key={`tab-${tabControl.id}`}
-              active={tabControl.value === tab}
               value={tabControl.value}
               className='tab-md md:text-2xl md:tab-lg'
+              label={tabControl.label}
             >
               {tabControl.label}
             </Tabs.Tab>
           )}
         </Tabs>
       </section>
-      <TabServices tab={tab} />
-      <TabSolutions tab={tab} />
-      <TabIndustries tab={tab} />
-    </div>
+    </>
   )
 }

@@ -2,10 +2,7 @@ import React from 'react'
 import Solution from './solution'
 import { solutions } from '@/constants/home-tab-control'
 
-const TabSolutions = ({ tab = '' }) => {
-  if (tab !== 'solutions') {
-    return null
-  }
+export default function Solutions () {
   return (
     <section className='flex flex-col justify-start gap-8'>
       <Solution
@@ -42,5 +39,3 @@ const TabSolutions = ({ tab = '' }) => {
     </section>
   )
 }
-
-export default TabSolutions

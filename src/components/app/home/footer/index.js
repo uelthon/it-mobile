@@ -76,13 +76,13 @@ const Footer = () => {
         <section className='px-4 text-3xl font-bold md:px-0'>
           <ul className='flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between'>
             <li>
-              <a>SUPPORT</a>
+              <Link href='/faq'>SUPPORT</Link>
             </li>
             <li>
-              <a>PRIVACY POLICY</a>
+              <Link href='/privacy-policy'>PRIVACY POLICY</Link>
             </li>
             <li>
-              <a>TERMS OF SERVICE</a>
+              <Link href='/terms-of-service'>TERMS OF SERVICE</Link>
             </li>
           </ul>
         </section>

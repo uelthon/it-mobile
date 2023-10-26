@@ -3,7 +3,7 @@ import React from 'react'
 export default function TermsOfService () {
   return (
     <div className='flex flex-col gap-4 justify-start pb-[6.25rem]'>
-      <h1 className='w-[60%] md:w-full text-5xl text-it-blue-1 font-extrabold px-2 text-left md:text-center'>
+      <h1 className='w-[60%] md:w-full text-5xl md:text-7xl text-it-blue-1 font-extrabold px-2 text-left md:text-center'>
         Terms of Service
       </h1>
       <section className='w-full px-3 flex flex-col justify-start items-center'>
