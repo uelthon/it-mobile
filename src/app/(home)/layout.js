@@ -15,7 +15,6 @@ export default function HomeLayout ({ children, tags }) {
         <div className='w-full md:w-4/5 2xl:max-w-[1440px]'>
           <div className='w-full flex flex-col justify-start gap-7 py-7'>
             {children}
-            {tags}
           </div>
         </div>
       </main>
