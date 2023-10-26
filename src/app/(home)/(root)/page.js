@@ -14,7 +14,7 @@ import { tabConstrols } from '@/constants/home-tab-control'
 export default function Home () {
   return (
     <>
-      <section className='flex flex-col justify-start gap-3 px-3 md:p-0'>
+      <section className='flex flex-col justify-start gap-3 px-3 md:p-0 md:max-w-[50%] md:items-end'>
         <h1 className='text-[2.375rem] font-extrabold leading-[87%] max-w-md md:text-5xl'>
           Simplify IT with Our Comprehensive<br /> <span className='text-it-blue-1'>All-Inclusive</span><br /> Subscription Plans.
         </h1>
