@@ -1,6 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
-import Logo from '@/components/shared/icons/logo'
 import Check from '@/components/shared/icons/check'
 import illustrations from '@/assets/images/image-1.webp'
 import pc from '@/assets/images/pc.webp'
@@ -20,9 +18,6 @@ export default function Home ({ searchParams }) {
   const tab = searchParams?.tab || 'services'
   return (
     <div className='w-full flex flex-col justify-start gap-7 py-7'>
-      <header className='w-full flex justify-center'>
-        <Link href='/'><Logo /></Link>
-      </header>
       <section className='flex flex-col justify-start gap-3 px-3 md:p-0'>
         <h1 className='text-[2.375rem] font-extrabold leading-[87%]'>
           Simplify IT with Our Comprehensive<br /> <span className='text-it-blue-1'>All-Inclusive</span> Subscription Plans.
