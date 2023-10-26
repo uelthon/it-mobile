@@ -15,33 +15,35 @@ export default function Home () {
   return (
     <>
       <section className='flex flex-col justify-start gap-3 px-3 md:p-0'>
-        <h1 className='text-[2.375rem] font-extrabold leading-[87%]'>
-          Simplify IT with Our Comprehensive<br /> <span className='text-it-blue-1'>All-Inclusive</span> Subscription Plans.
+        <h1 className='text-[2.375rem] font-extrabold leading-[87%] max-w-md md:text-5xl'>
+          Simplify IT with Our Comprehensive<br /> <span className='text-it-blue-1'>All-Inclusive</span><br /> Subscription Plans.
         </h1>
-        <p className='text-2xl text-it-gray-2 leading-normal'>
+        <p className='text-2xl text-it-gray-2 leading-normal max-w-md'>
           Starting at Just $49 per Month per User. <span className='text-it-blue-1 [1.375rem] font-bold'>View Pricing</span>
         </p>
       </section>
       <section className='pl-3 relative overflow-hidden pb-8 w-full'>
-        <p className='text-lg text-it-gray-2 leading-normal'>Every plan includes:</p>
-        <ul className='flex flex-col justify-start [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:text-[2.375rem] [&>li]:leading-[100%] [&>li]:font-extrabold'>
-          <li className='text-it-blue-1'><Check /> Setup</li>
-          <li><Check /> Onboarding</li>
-          <li><Check /> Backup</li>
-          <li><Check /> Security</li>
-          <li><Check /> Support</li>
-          <li><Check /> Update</li>
-        </ul>
+        <p className='text-lg text-it-gray-2 leading-normal md:text-center'>Every plan includes:</p>
+        <div className='flex md:justify-center'>
+          <ul className='grid grid-cols-1 justify-start [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:text-[2.375rem] [&>li]:leading-[100%] [&>li]:font-extrabold md:grid-cols-3 md:gap-x-20 md:gap-y-2'>
+            <li className='text-it-blue-1'><Check /> Setup</li>
+            <li><Check /> Onboarding</li>
+            <li><Check /> Backup</li>
+            <li><Check /> Security</li>
+            <li><Check /> Support</li>
+            <li><Check /> Update</li>
+          </ul>
+        </div>
         <img
-          className='absolute -right-1/4 -bottom-4 w-72 md:w-1/2 md:h-full md:-right-4 md:top-1/2 md:-translate-y-1/2  object-contain -z-10'
+          className='absolute -right-1/4 -bottom-4 w-72 md:w-1/2 md:h-full md:-right-4 md:top-1/2 md:-translate-y-1/2  object-contain -z-10 md:hidden'
           src={illustrations.src}
           width={illustrations.width}
           height={illustrations.height}
         />
       </section>
-      <section className='px-3 flex justify-center items-center gap-4 md:justify-between flex-wrap'>
+      <section className='px-3 flex justify-center items-center gap-4 flex-wrap'>
         <img src={pc.src} width={pc.width} height={pc.height} />
-        <h1 className='text-5xl font-extrabold leading-[87%] text-center md:text-left'>
+        <h1 className='text-5xl font-extrabold leading-[87%] text-center max-w-xs'>
           <span className='text-it-blue-1'>You handle your business</span><br /> We handle your IT.
         </h1>
       </section>
@@ -75,7 +77,7 @@ export default function Home () {
           <button className='btn w-56'>Cambiar a Español</button>
         </div>
       </section>
-      <h1 className='pl-4 text-it-blue-1 text-5xl font-extrabold'>Explore</h1>
+      <h1 className='pl-4 text-it-blue-1 text-5xl font-extrabold md:text-center'>Explore</h1>
       <section className='flex justify-center'>
         <Tabs>
           {tabConstrols.map(tabControl =>

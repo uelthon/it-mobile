@@ -4,18 +4,22 @@ import { industries } from '@/constants/home-tab-control'
 
 export default function Industires () {
   return (
-    <section className='flex flex-col justify-start gap-8'>
-      <Industry
-        data={industries.none}
-      />
-      <Industry
-        data={industries.consumers}
-        title='Consumer Goods'
-      />
-      <Industry
-        data={industries.educations}
-        title='Education'
-      />
+    <section className='w-full flex flex-col items-center gap-8'>
+      <div>
+        <Industry
+          data={industries.none}
+        />
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+        <Industry
+          data={industries.consumers}
+          title='Consumer Goods'
+        />
+        <Industry
+          data={industries.educations}
+          title='Education'
+        />
+      </div>
     </section>
   )
 }

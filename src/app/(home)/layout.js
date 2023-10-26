@@ -8,11 +8,11 @@ export default function HomeLayout ({ children, tags }) {
   return (
     <>
       <Header />
-      <header className='w-full flex justify-center py-12'>
+      <header className='w-full flex justify-center pt-12 pb-8'>
         <Link href='/'><Logo /></Link>
       </header>
-      <main className='w-full flex flex-col justify-start items-center'>
-        <div className='w-full md:w-4/5 2xl:max-w-[1440px]'>
+      <main className='w-full flex flex-col justify-start items-center mb-12'>
+        <div className='w-full md:max-w-[1210px]'>
           <div className='w-full flex flex-col justify-start gap-7 py-7'>
             {children}
           </div>

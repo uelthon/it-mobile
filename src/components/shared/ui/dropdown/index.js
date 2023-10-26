@@ -12,9 +12,12 @@ const Dropdown = ({ title = '', children = <></> }) => {
       <header
         className='border-[2px] border-solid border-it-black-1 px-[1rem] py-3'
       >
-        <div className='flex items-center justify-between text-2xl'>
+        <div
+          className='flex items-center justify-between text-2xl'
+          onClick={() => setShow(prev => !prev)}
+        >
           <p>{title}</p>
-          <div className='cursor-pointer' onClick={() => setShow(prev => !prev)}>
+          <div className='cursor-pointer'>
             {show ? <ArrowUp /> : <ArrowDown />}
           </div>
         </div>
