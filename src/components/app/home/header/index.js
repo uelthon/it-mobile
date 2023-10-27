@@ -3,6 +3,7 @@ import Email from '@/components/shared/icons/email'
 import Phone from '@/components/shared/icons/phone'
 import Tags from '@/components/shared/icons/tags'
 import Whatsapp from '@/components/shared/icons/whatsapp'
+import Link from 'next/link'
 import React from 'react'
 
 const Header = () => {
@@ -12,7 +13,11 @@ const Header = () => {
         <li><Whatsapp /></li>
         <li><Email /></li>
         <li><Phone /></li>
-        <li><Tags /></li>
+        <li>
+          <Link href='/pricing'>
+            <Tags />
+          </Link>
+        </li>
         <li><Avatar /></li>
       </ul>
     </header>
