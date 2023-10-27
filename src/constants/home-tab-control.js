@@ -1,13 +1,30 @@
+import { Bank } from '@/components/shared/icons/bank'
 import Car from '@/components/shared/icons/car'
 import CarLocation from '@/components/shared/icons/car-location'
 import Childrens from '@/components/shared/icons/childrens'
 import Factory from '@/components/shared/icons/factory'
+import FactoryTwo from '@/components/shared/icons/factory-two'
+import Fashion from '@/components/shared/icons/fashion'
+import Gas from '@/components/shared/icons/gas'
 import Heart from '@/components/shared/icons/heart'
 import Home from '@/components/shared/icons/home'
+import Hospital from '@/components/shared/icons/hospital'
+import Insurance from '@/components/shared/icons/insurance'
+import MedTech from '@/components/shared/icons/med-tech'
 import Milk from '@/components/shared/icons/milk'
+import Newspaper from '@/components/shared/icons/newspaper'
+import OnlineAd from '@/components/shared/icons/online-ad'
+import Pharma from '@/components/shared/icons/pharma'
+import Pig from '@/components/shared/icons/pig'
+import Providers from '@/components/shared/icons/providers'
+import Radio from '@/components/shared/icons/radio'
 import School from '@/components/shared/icons/school'
 import Shirt from '@/components/shared/icons/shirt'
+import Shop from '@/components/shared/icons/shop'
+import SocialMedia from '@/components/shared/icons/social-media'
+import { SolarPanel } from '@/components/shared/icons/solar-panel'
 import Teacher from '@/components/shared/icons/teacher'
+import Television from '@/components/shared/icons/television'
 
 export const tabConstrols = [
   {
@@ -289,6 +306,7 @@ export const solutions = {
   ]
 }
 
+/** @type {Object.<string, Array<{id:number,label:string,icon:JSX.Element,href:string}>>} */
 export const industries = {
   none: [
     {
@@ -353,6 +371,150 @@ export const industries = {
       id: 4,
       label: 'Skill centers',
       icon: <Teacher />,
+      href: ''
+    }
+  ],
+  energy: [
+    {
+      id: 1,
+      label: 'Power & Utilities',
+      icon: <SolarPanel />,
+      href: ''
+    },
+    {
+      id: 2,
+      label: 'Oil & Gas',
+      icon: <Gas />,
+      href: ''
+    }
+  ],
+  financial: [
+    {
+      id: 1,
+      label: 'Banking',
+      icon: <Bank />,
+      href: ''
+    },
+    {
+      id: 2,
+      label: 'Insurance',
+      icon: <Insurance />,
+      href: ''
+    },
+    {
+      id: 3,
+      label: 'Wealth & Asset Management',
+      icon: <Pig />,
+      href: ''
+    }
+  ],
+  healthcare: [
+    {
+      id: 1,
+      label: 'Providers',
+      icon: <Providers />,
+      href: ''
+    },
+    {
+      id: 2,
+      label: 'Payers',
+      icon: <Insurance />,
+      href: ''
+    },
+    {
+      id: 3,
+      label: 'Pharma',
+      icon: <Pharma />,
+      href: ''
+    },
+    {
+      id: 4,
+      label: 'MedTech',
+      icon: <MedTech />,
+      href: ''
+    },
+    {
+      id: 5,
+      label: 'Hospitals',
+      icon: <Hospital />,
+      href: ''
+    }
+  ],
+  manufacturing: [
+    {
+      id: 1,
+      label: 'Factory',
+      icon: <FactoryTwo />,
+      href: ''
+    },
+    {
+      id: 2,
+      label: 'Shops',
+      icon: <Shop />,
+      href: ''
+    }
+  ],
+  retail: [
+    {
+      id: 1,
+      label: 'Fashion',
+      icon: <Fashion />,
+      href: ''
+    },
+    {
+      id: 2,
+      label: 'Newspaper',
+      icon: <Newspaper />,
+      href: ''
+    },
+    {
+      id: 3,
+      label: 'Social Media',
+      icon: <SocialMedia />,
+      href: ''
+    },
+    {
+      id: 4,
+      label: 'Radio',
+      icon: <Radio />,
+      href: ''
+    },
+    {
+      id: 5,
+      label: 'Online Advertising',
+      icon: <OnlineAd />,
+      href: ''
+    }
+  ],
+  media: [
+    {
+      id: 1,
+      label: 'Television',
+      icon: <Television />,
+      href: ''
+    },
+    {
+      id: 2,
+      label: 'Newspaper',
+      icon: <Newspaper />,
+      href: ''
+    },
+    {
+      id: 3,
+      label: 'Social Media',
+      icon: <SocialMedia />,
+      href: ''
+    },
+    {
+      id: 4,
+      label: 'Radio',
+      icon: <Radio />,
+      href: ''
+    },
+    {
+      id: 5,
+      label: 'Online Advertising',
+      icon: <OnlineAd />,
       href: ''
     }
   ]

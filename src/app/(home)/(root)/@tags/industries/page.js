@@ -19,6 +19,30 @@ export default function Industires () {
           data={industries.educations}
           title='Education'
         />
+        <Industry
+          data={industries.energy}
+          title='Energy & Utilities'
+        />
+        <Industry
+          data={industries.financial}
+          title='Financial Services'
+        />
+        <Industry
+          data={industries.healthcare}
+          title='Healthcare & Life Sciences'
+        />
+        <Industry
+          data={industries.manufacturing}
+          title='Manufacturing'
+        />
+        <Industry
+          data={industries.retail}
+          title='Retail'
+        />
+        <Industry
+          data={industries.media}
+          title='Media'
+        />
       </div>
     </section>
   )

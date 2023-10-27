@@ -8,7 +8,7 @@ const Industry = ({ data = [], title = '' }) => {
         {data.map(industry =>
           <button
             key={`industry-${title}-industry`}
-            className='btn-it'
+            className='btn-it h-[4.5rem]'
           >
             {industry.icon}
             <span>
