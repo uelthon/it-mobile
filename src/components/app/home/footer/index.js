@@ -4,7 +4,7 @@ import Location from '@/components/shared/icons/location'
 import LogoWhite from '@/components/shared/icons/logo-white'
 import Phone from '@/components/shared/icons/phone'
 import Email from '@/components/shared/icons/email'
-import appcoders from '@/assets/images/appcoders.png'
+import Appcoders from '@/components/shared/icons/appcoders'
 
 const Footer = () => {
   return (
@@ -15,13 +15,13 @@ const Footer = () => {
             <Link href='/'>
               <LogoWhite />
             </Link>
-            <ul className='flex flex-col gap-4 text-xl font-bold leading-normal [&>li]:flex [&>li]:items-center [&>li]:flex-wrap [&>li]:gap-4'>
+            <ul className='flex flex-col gap-4 text-xl font-bold leading-normal [&>li]:flex [&>li]:items-center [&>li]:gap-4'>
               <li>
                 <span>
                   <Location />
                 </span>
-                <a className='max-w-[17rem]' href='https://maps.app.goo.gl/eXjDo7wkjSS2HHrt9' target='_blank' rel='noreferrer'>
-                  323 Sunny Isles Blvd Suite 727, Sunny Isles Beach, Fl. 33160.
+                <a className='w-full' href='https://maps.app.goo.gl/eXjDo7wkjSS2HHrt9' target='_blank' rel='noreferrer'>
+                  323 Sunny Isles Blvd 7th Floor,<br /> Sunny Isles Beach, FL 33160
                 </a>
               </li>
               <li>
@@ -91,7 +91,10 @@ const Footer = () => {
         <div className='border-b-2 border-solid border-it-gray-sky md:hidden' />
         <section className='flex flex-col items-center gap-4'>
           <p className='text-center text-2xl font-medium'>© 2023 Appcoders LLC. All rights reserved.</p>
-          <img src={appcoders.src} width={appcoders.width} height={appcoders.height} />
+          <div className='flex items-center gap-2'>
+            <p>A product of</p>
+            <Appcoders />
+          </div>
         </section>
       </div>
 
