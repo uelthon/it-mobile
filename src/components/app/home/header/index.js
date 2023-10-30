@@ -8,7 +8,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className='bg-it-black-1 py-4 px-2 md:px-0 w-full flex flex-col justify-center items-center'>
+    <header className='sticky top-0 left-0 bg-it-black-1 py-4 px-2 md:px-0 w-full flex flex-col justify-center items-center z-50 shadow-lg'>
       <ul className='flex items-center justify-evenly w-full md:max-w-[1210px] text-white'>
         <li><Whatsapp /></li>
         <li><Email /></li>
