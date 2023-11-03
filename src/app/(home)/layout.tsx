@@ -4,7 +4,11 @@ import Footer from '@/components/app/home/footer'
 import Link from 'next/link'
 import Logo from '@/components/shared/icons/logo'
 
-export default function HomeLayout ({ children, tags }) {
+interface Props {
+  children: React.ReactNode
+}
+
+export default function HomeLayout ({ children }: Props) {
   return (
     <>
       <Header />

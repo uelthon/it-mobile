@@ -1,6 +1,16 @@
 import React from 'react'
 
-const Industry = ({ data = [], title = '' }) => {
+interface Props {
+  data: Array<{
+    id: number
+    label: string
+    icon: React.ReactNode
+    href: string
+  }>
+  title?: string
+}
+
+const Industry = ({ data = [], title = '' }: Props) => {
   return (
     <section className='flex flex-col justify-start gap-5'>
       {title && <h1 className='title max-w-[70%] text-4xl font-bold md:max-w-full md:text-center'>{title}</h1>}

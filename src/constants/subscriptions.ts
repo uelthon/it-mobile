@@ -5,7 +5,36 @@ import logotwo from '@/assets/images/subscriptions/logo-2.webp'
 import logothree from '@/assets/images/subscriptions/logo-3.webp'
 import logofour from '@/assets/images/subscriptions/logo-4.webp'
 
-export const subscriptions = {
+interface Subscriptions {
+  [k: string]: Subscription[]
+}
+type Subscription = {
+  tag: 'title'
+  value: string
+} | {
+  tag: 'price'
+  value: string
+} | {
+  tag: 'description'
+  value: string
+} | {
+  tag: 'list'
+  value: List
+} | {
+  tag: 'sub-title'
+  value: string
+} | {
+  tag: 'assets'
+  value: string[]
+}
+
+interface List {
+  checkColor: string
+  title?: string
+  data: string[]
+}
+
+export const subscriptions: Subscriptions = {
   simple: [
     {
       tag: 'title',

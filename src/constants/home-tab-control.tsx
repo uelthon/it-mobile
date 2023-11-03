@@ -107,7 +107,16 @@ export const services = [
   }
 ]
 
-export const solutions = {
+interface Solutions {
+  [k: string]: Array<{
+    id: number
+    title: string
+    content: string
+    img: string
+  }>
+}
+
+export const solutions: Solutions = {
   none: [
     {
       id: 1,
@@ -306,8 +315,16 @@ export const solutions = {
   ]
 }
 
-/** @type {Object.<string, Array<{id:number,label:string,icon:JSX.Element,href:string}>>} */
-export const industries = {
+interface Industries {
+  [k: string]: Array<{
+    id: number
+    label: string
+    icon: React.ReactNode
+    href: string
+  }>
+}
+
+export const industries: Industries = {
   none: [
     {
       id: 1,

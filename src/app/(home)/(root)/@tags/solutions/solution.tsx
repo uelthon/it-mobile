@@ -1,7 +1,17 @@
 import Card from '@/components/shared/ui/card'
 import React from 'react'
 
-const Solution = ({ data = [], title = '' }) => {
+interface Props {
+  data: Array<{
+    id: number
+    title: string
+    content: string
+    img: string
+  }>
+  title?: string
+}
+
+const Solution = ({ data = [], title = '' }: Props) => {
   return (
     <section className='flex flex-col justify-start gap-5'>
       {title &&

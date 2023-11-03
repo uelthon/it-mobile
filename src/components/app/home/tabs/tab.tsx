@@ -2,7 +2,14 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-const Tab = ({ children, value = '', className = '', label = '' }) => {
+interface Props {
+  children: React.ReactNode
+  value: string
+  className?: string
+  label: string
+}
+
+const Tab = ({ children, value = '', className = '', label = '' }: Props) => {
   const pathname = usePathname()
   return (
     <Link
