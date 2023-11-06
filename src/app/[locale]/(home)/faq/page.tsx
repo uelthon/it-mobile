@@ -1,11 +1,13 @@
 import Dropdown from '@/components/shared/ui/dropdown'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 
 export default function FAQ () {
+  const t = useTranslations('faq')
   return (
     <div className='flex flex-col gap-4 justify-start pb-[6.25rem]'>
       <h1 className='w-[60%] md:w-full text-5xl md:text-7xl text-it-blue-1 font-extrabold px-2 text-left md:text-center'>
-        FAQ
+        {t('title')}
       </h1>
       <section className='w-full flex flex-col justify-start items-center px-2 md:px-0'>
         <div className='flex flex-col justify-start gap-4 w-full md:max-w-prose'>

@@ -2,20 +2,22 @@ import React from 'react'
 import { subscriptions } from '@/constants/subscriptions'
 import Tags from '@/components/shared/icons/tags'
 import Check from '@/components/shared/icons/check'
+import { useTranslations } from 'next-intl'
 
 export default function Pricing () {
+  const t = useTranslations('pricing')
   return (
     <div className='flex flex-col gap-8 justify-start pb-[6.25rem]'>
       <h1 className='w-full text-5xl md:text-7xl text-it-blue-1 font-extrabold px-2 text-left md:text-center'>
-        Pricing
+        {t('title')}
       </h1>
       <div className='flex flex-col justify-start gap-4 px-2 md:px-0 md:justify-center'>
         <p className='text-[2.375rem] text-it-blue-1 font-extrabold leading-[87%] md:text-center'>
-          One subscription.<br /> <span className='text-it-black-1'>A world of alternatives.</span>
+          {t('sub-title.line-one')}<br /> <span className='text-it-black-1'>{t('sub-title.line-two')}</span>
         </p>
         <div className='flex justify-center'>
           <p className='text-2xl text-it-gray-2 md:text-center md:max-w-2xl'>
-            With the flexibility to combine plans for each employee and device, and the freedom to adjust your plans as needed.
+            {t('description')}
           </p>
         </div>
       </div>

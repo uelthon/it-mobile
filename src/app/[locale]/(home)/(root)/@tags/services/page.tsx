@@ -27,8 +27,8 @@ export default function Services () {
       </section>
       <section className='flex flex-col justify-start gap-2'>
         <div className='flex flex-col justify-start gap-2 pl-2 md:pl-0 md:text-center'>
-          <h1 className='text-6xl font-extrabold leading-[83%]'>Expanded Portfolio</h1>
-          <p className='text-xl text-it-gray-2'>Unlocking the Full Potential of Your Business.</p>
+          <h1 className='text-6xl font-extrabold leading-[83%]'>{t('tab-services.text-one')}</h1>
+          <p className='text-xl text-it-gray-2'>{t('tab-services.text-two')}</p>
         </div>
         <section className='grid grid-cols-[repeat(auto-fill,9.125rem)] gap-4 px-2 md:px-0 md:gap-x-8 justify-between md:justify-center'>
           {brands.map((brand, i) =>
@@ -36,15 +36,15 @@ export default function Services () {
           )}
         </section>
         <div className='flex justify-center'>
-          <button className='btn w-56'>View All</button>
+          <button className='btn w-56'>{t('tab-services.text-three')}</button>
         </div>
       </section>
       <section className='flex flex-col justify-start gap-2'>
         <div className='flex flex-col justify-start gap-2 px-2 md:pl-0 md:text-center'>
           <h1 className='text-6xl font-extrabold leading-[83%]'>
-            Embrace <span className='text-it-blue-1'>the Future</span>
+            {t('tab-services.text-four.line-one')} <span className='text-it-blue-1'>{t('tab-services.text-four.line-two')}</span>
           </h1>
-          <p className='text-xl text-it-gray-2'>Building Tomorrow's Success Today on the Cloud.</p>
+          <p className='text-xl text-it-gray-2'>{t('tab-services.text-five')}</p>
         </div>
         <section className='w-full flex flex-col gap-8 md:flex-row md:justify-center'>
           <section
@@ -67,7 +67,7 @@ export default function Services () {
             </div>
           </section>
           <section className='flex flex-col justify-start md:items-start gap-4 text-it-gray-1 mt-4'>
-            <h1 className='text-center text-4xl font-bold'>Contact Sales</h1>
+            <h1 className='text-center text-4xl font-bold'>{t('tab-services.text-six')}</h1>
             <ul className='flex flex-col justify-start gap-4 md:items-start [&>li]:flex [&>li]:flex-col [&>li]:justify-start [&>li]:items-center [&>li]:md:items-start [&>li]:gap-2 [&>li>a]:text-3xl [&>li>a]:font-bold'>
               <li>
                 <span className='text-it-blue-1'>

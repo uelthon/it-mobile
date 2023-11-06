@@ -5,8 +5,10 @@ import LogoWhite from '@/components/shared/icons/logo-white'
 import Phone from '@/components/shared/icons/phone'
 import Email from '@/components/shared/icons/email'
 import Appcoders from '@/components/shared/icons/appcoders'
+import { useTranslations } from 'next-intl'
 
 const Footer = () => {
+  const t = useTranslations('home')
   return (
     <footer className='w-full flex flex-col justify-start items-center bg-it-black-1 text-white py-8'>
       <div className='w-full md:max-w-[1210px] flex flex-col justify-start gap-7'>
@@ -21,7 +23,7 @@ const Footer = () => {
                   <Location />
                 </span>
                 <a className='w-full' href='https://maps.app.goo.gl/eXjDo7wkjSS2HHrt9' target='_blank' rel='noreferrer'>
-                  323 Sunny Isles Blvd 7th Floor,<br /> Sunny Isles Beach, FL 33160
+                  {t('footer.address.text-one')}<br /> {t('footer.address.text-two')}
                 </a>
               </li>
               <li>
@@ -29,7 +31,7 @@ const Footer = () => {
                   <Phone />
                 </span>
                 <a href='tel:+13052042754' target='_blank' rel='noreferrer'>
-                  (305) 204-2754
+                  {t('footer.phone')}
                 </a>
               </li>
               <li>
@@ -37,7 +39,7 @@ const Footer = () => {
                   <Email />
                 </span>
                 <a href='mailto:sales@lordsofit.com' target='_blank' rel='noreferrer'>
-                  sales@lordsofit.com
+                  {t('footer.email')}
                 </a>
               </li>
             </ul>
@@ -46,30 +48,13 @@ const Footer = () => {
           <section className='px-4 text-3xl font-bold md:px-0'>
             <ul className='flex flex-col items-start gap-4'>
               <li>
-                <a>SERVICES</a>
+                <a>{t('footer.services')}</a>
               </li>
               <li>
-                <a>SOLUTIONS</a>
+                <a>{t('footer.solutions')}</a>
               </li>
               <li>
-                <a>INDUSTRIES</a>
-              </li>
-            </ul>
-          </section>
-          <div className='border-b-2 border-solid border-it-gray-sky md:hidden' />
-          <section className='px-4 text-3xl font-bold md:px-0'>
-            <ul className='flex flex-col items-start gap-4'>
-              <li>
-                <a>COMPANY</a>
-              </li>
-              <li>
-                <a>LEADERSHIP</a>
-              </li>
-              <li>
-                <a>ABOUT US</a>
-              </li>
-              <li>
-                <a>CAREERS</a>
+                <a>{t('footer.industries')}</a>
               </li>
             </ul>
           </section>
@@ -77,22 +62,39 @@ const Footer = () => {
           <section className='px-4 text-3xl font-bold md:px-0'>
             <ul className='flex flex-col items-start gap-4'>
               <li>
-                <Link href='/faq'>SUPPORT</Link>
+                <a>{t('footer.company')}</a>
               </li>
               <li>
-                <Link href='/privacy-policy'>PRIVACY POLICY</Link>
+                <a>{t('footer.leadership')}</a>
               </li>
               <li>
-                <Link href='/terms-of-service'>TERMS OF SERVICE</Link>
+                <a>{t('footer.about-us')}</a>
+              </li>
+              <li>
+                <a>{t('footer.careers')}</a>
+              </li>
+            </ul>
+          </section>
+          <div className='border-b-2 border-solid border-it-gray-sky md:hidden' />
+          <section className='px-4 text-3xl font-bold md:px-0'>
+            <ul className='flex flex-col items-start gap-4'>
+              <li>
+                <Link href='/faq'>{t('footer.support')}</Link>
+              </li>
+              <li>
+                <Link href='/privacy-policy'>{t('footer.privacy-policy')}</Link>
+              </li>
+              <li>
+                <Link href='/terms-of-service'>{t('footer.terms-of-services')}</Link>
               </li>
             </ul>
           </section>
         </div>
         <div className='border-b-2 border-solid border-it-gray-sky md:hidden' />
         <section className='flex flex-col items-center gap-4'>
-          <p className='text-center text-2xl font-medium'>© 2023 Appcoders LLC. All rights reserved.</p>
+          <p className='text-center text-2xl font-medium' dangerouslySetInnerHTML={{ __html: t('footer.rights') }} />
           <div className='flex items-center gap-2'>
-            <p>A product of</p>
+            <p>{t('footer.prefix')}</p>
             <Appcoders />
           </div>
         </section>

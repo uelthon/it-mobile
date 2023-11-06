@@ -58,6 +58,54 @@
       "services": "Services",
       "solutions": "Solutions",
       "industries":"Industries"
+    },
+    "tab-services": {
+      "text-one": "Expanded Portfolio",
+      "text-two": "Unlocking the Full Potential of Your Business.",
+      "text-three": "View All",
+      "text-four": {
+        "line-one": "Embrace",
+        "line-two": "the Future"
+      },
+      "text-five": "Building Tomorrow's Success Today on the Cloud.",
+      "text-six": "Contact Sales"
+    },
+    "footer": {
+      "address": {
+        "text-one": "323 Sunny Isles Blvd 7th Floor,",
+        "text-two": "Sunny Isles Beach, FL 33160"
+      },
+      "phone": "(305) 204-2754",
+      "email": "sales@lordsofit.com",
+      "services": "SERVICES",
+      "solutions": "SOLUTIONS",
+      "industries": "INDUSTRIES",
+      "company": "COMPANY",
+      "leadership": "LEADERSHIP",
+      "about-us": "ABOUT US",
+      "careers": "CAREERS",
+      "support": "SUPPORT",
+      "privacy-policy": "PRIVACY POLICY",
+      "terms-of-services": "TERMS OF SERVICE",
+      "rights": "© 2023 Appcoders LLC. All rights reserved.",
+      "prefix": "A product of"
     }
+  },
+  "faq": {
+    "title": "FAQ"
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy"
+  },
+  "terms-of-service": {
+    "title": "Terms of Service"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "sub-title": {
+      "line-one": "One subscription.",
+      "line-two": "A world of alternatives."
+    },
+    "description": "With the flexibility to combine plans for each employee and device, and the freedom to adjust your plans as needed."
   }
 }
