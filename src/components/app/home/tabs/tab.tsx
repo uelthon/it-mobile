@@ -7,19 +7,18 @@ interface Props {
   value: string
   className?: string
   label: string
+  includes: string[]
 }
 
-const Tab = ({ children, value = '', className = '', label = '' }: Props) => {
+const Tab = ({ children, value = '', className = '', label = '', includes = [] }: Props) => {
   const pathname = usePathname()
   return (
     <Link
       href={value}
       className={`tab tab-bordered 
-      ${className} ${pathname === value
+      ${className} ${includes.includes(pathname)
         ? 'tab-active font-bold container-poly'
-        : (pathname === '/' && label === 'Services')
-        ? 'tab-active font-bold container-poly'
-: ''}`}
+        : ''}`}
       scroll={false}
     >
       {children}

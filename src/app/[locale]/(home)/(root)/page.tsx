@@ -10,28 +10,31 @@ import Support from '@/components/shared/icons/support'
 import Language from '@/components/shared/icons/language'
 import Tabs from '@/components/app/home/tabs'
 import { tabConstrols } from '@/constants/home-tab-control'
+import { useTranslations } from 'next-intl'
+import Link from 'next-intl/link'
 
 export default function Home () {
+  const t = useTranslations('home')
   return (
     <>
       <section className='flex flex-col justify-start gap-3 px-3 md:p-0 md:max-w-[50%] md:items-end'>
         <h1 className='text-[2.375rem] font-extrabold leading-[87%] max-w-md md:text-5xl'>
-          Simplify IT with Our Comprehensive<br /> <span className='text-it-blue-1'>All-Inclusive</span><br /> Subscription Plans.
+          {t('title.line1')}<br /> <span className='text-it-blue-1'>{t('title.line2')}</span><br /> {t('title.line3')}
         </h1>
-        <p className='text-2xl text-it-gray-2 leading-normal max-w-md'>
-          Starting at Just $49 per Month per User. <span className='text-it-blue-1 [1.375rem] font-bold'>View Pricing</span>
+        <p className='text-2xl text-it-gray-2 leading-[87%] max-w-md'>
+          {t('price.line1')}<br /><span className='text-it-blue-1 [1.375rem] font-bold'>{t('price.line2')}</span>
         </p>
       </section>
       <section className='pl-3 relative overflow-hidden pb-8 w-full'>
         <p className='text-lg text-it-gray-2 leading-normal md:text-center'>Every plan includes:</p>
         <div className='flex md:justify-center'>
-          <ul className='grid grid-cols-1 justify-start [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:text-[2.375rem] [&>li]:leading-[100%] [&>li]:font-extrabold md:grid-cols-3 md:gap-x-20 md:gap-y-2'>
-            <li className='text-it-blue-1'><Check /> Setup</li>
-            <li><Check /> Onboarding</li>
-            <li><Check /> Backup</li>
-            <li><Check /> Security</li>
-            <li><Check /> Support</li>
-            <li><Check /> Update</li>
+          <ul className='grid grid-cols-1 justify-start [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:text-[2.375rem] [&>li]:leading-[100%] [&>li]:font-extrabold md:grid-cols-3 md:gap-x-20 md:gap-y-2 [&>li>svg]:text-it-blue-1'>
+            <li className='text-it-blue-1'><Check /> {t('plan-includes.item-zero')}</li>
+            <li><Check /> {t('plan-includes.item-one')}</li>
+            <li><Check /> {t('plan-includes.item-two')}</li>
+            <li><Check /> {t('plan-includes.item-three')}</li>
+            <li><Check /> {t('plan-includes.item-four')}</li>
+            <li><Check /> {t('plan-includes.item-five')}</li>
           </ul>
         </div>
         <img
@@ -44,48 +47,73 @@ export default function Home () {
       <section className='px-3 flex justify-center items-center gap-4 flex-wrap'>
         <img src={pc.src} width={pc.width} height={pc.height} />
         <h1 className='text-5xl font-extrabold leading-[87%] text-center max-w-xs'>
-          <span className='text-it-blue-1'>You handle your business</span><br /> We handle your IT.
+          <span className='text-it-blue-1'>{t('pc.line-one')}</span><br /> {t('pc.line-two')}
         </h1>
       </section>
       <section className='px-2 md:px-0 flex gap-4 justify-center flex-wrap'>
         <div className='it-card bg-it-gray-4'>
           <Security />
-          <p>Device Security <span className='text-it-blue-1'>for All.</span></p>
-          <p>Privacy for <span className='text-it-blue-1'>Everyone.</span></p>
+          <p>
+            {t('cards.security.text-one')}<br />
+            <span className='text-it-blue-1'>
+              {t('cards.security.text-two')}
+            </span>
+          </p>
+          <p>
+            {t('cards.security.text-three')}<br />
+            <span className='text-it-blue-1'>
+              {t('cards.security.text-four')}
+            </span>
+          </p>
         </div>
         <div className='it-card bg-it-blue-1'>
           <Hands />
-          <p>Onboarding as Simple as<br /><span className='text-white'>Receiving an Email</span></p>
+          <p>
+            {t('cards.hands.text-one')}<br />
+            <span className='text-white'>
+              {t('cards.hands.text-two')}
+            </span>
+          </p>
         </div>
         <div className='it-card bg-it-black-1'>
           <Repairs />
           <p className='text-white'>
-            <span className='text-it-blue-1'>On-Site Repairs</span><br /> No Waiting,<br /> No Delays.
+            <span className='text-it-blue-1'>
+              {t('cards.repairs.text-one')}
+            </span><br /> {t('cards.repairs.text-two')}<br /> {t('cards.repairs.text-three')}
           </p>
           <div className='text-white flex items-center gap-2 text-sm'>
-            <p>Proudly Serving Miami and Nearby Areas</p>
+            <p>{t('cards.repairs.text-four')}</p>
             <PlusCircle />
           </div>
         </div>
         <div className='it-card bg-it-red'>
           <Support />
-          <p>Remote Support <span className='text-white'>No Waiting,<br /> No Delays.<br /> (Worldwide)</span></p>
+          <p>
+            {t('cards.support.text-one')}<br />
+            <span className='text-white'>
+              {t('cards.support.text-two')}<br /> {t('cards.support.text-three')}<br /> {t('cards.support.text-four')}
+            </span>
+          </p>
         </div>
         <div className='it-card bg-it-purple'>
           <Language />
-          <p>Hablamos <span className='text-white'>Español.</span></p>
-          <button className='btn w-56'>Cambiar a Español</button>
+          <p>{t('cards.language.text-one')} <span className='text-white'>{t('cards.language.text-two')}</span></p>
+          <Link href='/' locale={t('cards.language.locale')} className='btn w-56'>{t('cards.language.text-three')}</Link>
         </div>
       </section>
-      <h1 className='pl-4 text-it-blue-1 text-5xl font-extrabold md:text-center'>Explore</h1>
+      <h1 className='pl-4 text-it-blue-1 text-5xl font-extrabold md:text-center'>
+        {t('explore')}
+      </h1>
       <section className='flex justify-center'>
         <Tabs>
-          {tabConstrols.map(tabControl =>
+          {tabConstrols[t('locale') as 'en' | 'es'].map(tabControl =>
             <Tabs.Tab
               key={`tab-${tabControl.id}`}
               value={tabControl.value}
               className='tab-md md:text-2xl md:tab-lg'
               label={tabControl.label}
+              includes={tabControl.includes}
             >
               {tabControl.label}
             </Tabs.Tab>

@@ -1,0 +1,63 @@
+{
+  "locale":"es",
+  "home": {
+    "locale": "es",
+    "title": {
+      "line1": "Simplifica la tecnología con",
+      "line2": "nuestros planes de suscripción todo",
+      "line3": "incluido."
+    },
+    "price": {
+      "line1": "Desde solo $49 al mes por usuario.",
+      "line2": "Ver precios"
+    },
+    "plan-includes": {
+      "item-zero": "Configuracion",
+      "item-one": "Implementación",
+      "item-two": "Backup",
+      "item-three": "Seguridad",
+      "item-four": "Soporte",
+      "item-five": "Actualizacion"
+    },
+    "pc": {
+      "line-one": "Tú manejas tu negocio.",
+      "line-two": "Nosotros la tecnología."
+    },
+    "cards": {
+      "security": {
+        "text-one": "Seguridad",
+        "text-two": "garantizada.",
+        "text-three": "Privacidad",
+        "text-four": "para todos."
+      },
+      "hands": {
+        "text-one": "Incorporación tan sencilla como",
+        "text-two": "recibir un correo electrónico."
+      },
+      "repairs": {
+        "text-one": "Reparaciones en el lugar.",
+        "text-two": "Sin esperas,",
+        "text-three": "sin retrasos.",
+        "text-four": "Con orgullo sirviendo a Miami y alrededores"
+      },
+      "support": {
+        "text-one": "Soporte remoto",
+        "text-two": "Sin esperas,",
+        "text-three": " Sin retrasos.",
+        "text-four": "(En todo el mundo)"
+      },
+      "language": {
+        "text-one": "We Speak",
+        "text-two": "English.",
+        "text-three": "Switch to English",
+        "locale": "en"
+      }
+    },
+    "explore": "Explorar",
+    "tabs": {
+      "services": "Services",
+      "solutions": "Solutions",
+      "industries":"Industries"
+    }
+  }
+}

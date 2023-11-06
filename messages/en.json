@@ -1,0 +1,63 @@
+{
+  "locale":"en",
+  "home": {
+    "locale": "en",
+    "title": {
+      "line1": "Simplify IT with Our Comprehensive",
+      "line2": "All-Inclusive",
+      "line3": "Subscription Plans."
+    },
+    "price": {
+      "line1": "Starting at Just $49 per Month per User. ",
+      "line2": "View Pricing"
+    },
+    "plan-includes": {
+      "item-zero": "Setup",
+      "item-one": "Onboarding",
+      "item-two": "Backup",
+      "item-three": "Security",
+      "item-four": "Support",
+      "item-five": "Update"
+    },
+    "pc": {
+      "line-one": "You handle your business",
+      "line-two": "We handle your IT."
+    },
+    "cards": {
+      "security": {
+        "text-one": "Device Security",
+        "text-two": "for All.",
+        "text-three": "Privacy for",
+        "text-four": "Everyone."
+      },
+      "hands": {
+        "text-one": "Onboarding as Simple as",
+        "text-two": "Receiving an Email"
+      },
+      "repairs": {
+        "text-one": "On-Site Repairs",
+        "text-two": "No Waiting,",
+        "text-three": "No Delays.",
+        "text-four": "Proudly Serving Miami and Nearby Areas"
+      },
+      "support": {
+        "text-one": "Remote Support",
+        "text-two": "No Waiting,",
+        "text-three": "No Delays.",
+        "text-four": "(Worldwide)"
+      },
+      "language": {
+        "text-one": "Hablamos",
+        "text-two": "Español.",
+        "text-three": "Cambiar a Español",
+        "locale": "es"
+      }
+    },
+    "explore": "Explore",
+    "tabs": {
+      "services": "Services",
+      "solutions": "Solutions",
+      "industries":"Industries"
+    }
+  }
+}
