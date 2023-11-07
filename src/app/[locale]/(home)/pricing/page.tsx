@@ -22,7 +22,7 @@ export default function Pricing () {
         </div>
       </div>
       <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2 md:px-0'>
-        {Object.entries(subscriptions).map(([key, value]) => {
+        {Object.entries(subscriptions[t('locale') as 'en' | 'es']).map(([key, value]) => {
           return (
             <div
               key={key}

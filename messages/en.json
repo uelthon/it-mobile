@@ -1,5 +1,7 @@
 {
-  "locale":"en",
+  "locale":{
+    "lang": "en"
+  },
   "home": {
     "locale": "en",
     "title": {
@@ -101,6 +103,7 @@
     "title": "Terms of Service"
   },
   "pricing": {
+    "locale":"en",
     "title": "Pricing",
     "sub-title": {
       "line-one": "One subscription.",
