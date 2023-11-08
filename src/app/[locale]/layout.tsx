@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { unstable_setRequestLocale } from 'next-intl/server'
 import { aceh } from '@/styles/aceh-font'
-import './globals.css'
+import '@/styles/globals.css'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

@@ -18,7 +18,11 @@ const Header = () => {
             <Tags />
           </Link>
         </li>
-        <li><Avatar /></li>
+        <li>
+          <Link href='/auth/login'>
+            <Avatar />
+          </Link>
+        </li>
       </ul>
     </header>
   )

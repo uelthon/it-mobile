@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Logo = () => {
+interface Props {
+  width?: string
+  height?: string
+}
+
+const Logo = ({ height = '51', width = '359' }: Props) => {
   return (
-    <svg width='359' height='51' viewBox='0 0 359 51' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg width={width} height={height} viewBox='0 0 359 51' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <g clipPath='url(#clip0_86_292)'>
         <path d='M336.708 51H0L22.3012 0H359L336.708 51Z' fill='#1D1D1B' />
         <path d='M29.7663 13.6652H40.3651L34.5576 31.7516H53.5391L52.2514 37.3784H28.3823C27.6816 37.3784 26.9633 37.195 26.2451 36.8192C25.518 36.4435 24.8961 36.0329 24.3793 35.5785C24.1954 35.4213 24.0552 35.1417 23.9589 34.7485C23.8538 34.3553 23.7837 33.9184 23.7399 33.4466C23.6961 32.9748 23.6874 32.4943 23.7049 32.005C23.7311 31.5157 23.7837 31.1225 23.8713 30.7992L29.7838 13.6565L29.7663 13.6652Z' fill='white' />
