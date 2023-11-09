@@ -15,7 +15,7 @@ export default function Services () {
   const t = useTranslations('home')
   return (
     <section className='flex flex-col justify-start gap-7 md:gap-16'>
-      <section className='px-2 md:px-0 flex gap-4 justify-center md:justify-between flex-wrap'>
+      <section className='px-2 md:px-0 flex gap-4 justify-center flex-wrap'>
         {services[t('locale') as 'en' | 'es'].map(service =>
           <Card
             key={`service-${service.id.toString()}`}

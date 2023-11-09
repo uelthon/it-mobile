@@ -48,13 +48,13 @@ const Footer = () => {
           <section className='px-4 text-3xl font-bold md:px-0'>
             <ul className='flex flex-col items-start gap-4'>
               <li>
-                <a>{t('footer.services')}</a>
+                <Link href='/services#tabs'>{t('footer.services')}</Link>
               </li>
               <li>
-                <a>{t('footer.solutions')}</a>
+                <Link href='/solutions#tabs'>{t('footer.solutions')}</Link>
               </li>
               <li>
-                <a>{t('footer.industries')}</a>
+                <Link href='/industries#tabs'>{t('footer.industries')}</Link>
               </li>
             </ul>
           </section>

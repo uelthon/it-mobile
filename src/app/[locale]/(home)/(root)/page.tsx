@@ -34,7 +34,7 @@ export default function Home () {
         />
       </section>
       <section className='pl-3 relative overflow-hidden pb-8 w-full'>
-        <p className='text-lg text-it-gray-2 leading-normal md:text-center'>Every plan includes:</p>
+        <p className='text-lg text-it-gray-2 leading-normal md:text-center'>{t('title-plan-includes')}</p>
         <div className='flex md:justify-center'>
           <ul className='grid grid-cols-1 justify-start [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:text-[2.375rem] [&>li]:leading-[100%] [&>li]:font-extrabold md:grid-cols-3 md:gap-x-20 md:gap-y-2 [&>li>svg]:text-it-blue-1'>
             <li className='text-it-blue-1'><Check /> {t('plan-includes.item-zero')}</li>
@@ -110,7 +110,7 @@ export default function Home () {
           <Link href='/' locale={t('cards.language.locale')} className='btn w-56'>{t('cards.language.text-three')}</Link>
         </div>
       </section>
-      <h1 className='pl-4 text-it-blue-1 text-5xl font-extrabold md:text-center'>
+      <h1 className='pl-4 text-it-blue-1 text-5xl font-extrabold md:text-center' id='tabs'>
         {t('explore')}
       </h1>
       <section className='flex justify-center'>
