@@ -21,5 +21,8 @@
   .it-input-border{
     @apply border-solid border-[1.5px] border-it-black-1;
   }
-  
+  .polygon{
+    -webkit-clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+    clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+  }
 }

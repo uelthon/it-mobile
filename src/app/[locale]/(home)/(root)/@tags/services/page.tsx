@@ -14,7 +14,7 @@ import { useTranslations } from 'next-intl'
 export default function Services () {
   const t = useTranslations('home')
   return (
-    <section className='flex flex-col justify-start gap-7 md:gap-12'>
+    <section className='flex flex-col justify-start gap-7 md:gap-16'>
       <section className='px-2 md:px-0 flex gap-4 justify-center md:justify-between flex-wrap'>
         {services[t('locale') as 'en' | 'es'].map(service =>
           <Card
@@ -25,14 +25,14 @@ export default function Services () {
           />
         )}
       </section>
-      <section className='flex flex-col justify-start gap-2'>
+      <section className='flex flex-col justify-start gap-8'>
         <div className='flex flex-col justify-start gap-2 pl-2 md:pl-0 md:text-center'>
           <h1 className='text-6xl font-extrabold leading-[83%]'>{t('tab-services.text-one')}</h1>
           <p className='text-xl text-it-gray-2'>{t('tab-services.text-two')}</p>
         </div>
-        <section className='grid grid-cols-[repeat(auto-fill,9.125rem)] gap-4 px-2 md:px-0 md:gap-x-8 justify-between md:justify-center'>
+        <section className='flex items-center flex-wrap gap-4 px-2 md:px-0 md:gap-x-24 justify-between md:justify-center'>
           {brands.map((brand, i) =>
-            <img className='object-contain' key={`brands-${i}`} src={brand.src} width={brand.width} height={brand.height} />
+            <img className='object-contain w-[9.125rem] h-[7.5rem]' key={`brands-${i}`} src={brand.src} width={brand.width} height={brand.height} />
           )}
         </section>
         <div className='flex justify-center'>

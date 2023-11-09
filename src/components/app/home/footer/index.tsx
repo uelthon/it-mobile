@@ -15,7 +15,7 @@ const Footer = () => {
         <div className='w-full flex flex-col justify-start gap-7 md:flex-row md:justify-between'>
           <section className='flex flex-col gap-8 px-4 md:px-0'>
             <Link href='/'>
-              <LogoWhite />
+              <LogoWhite width='320' />
             </Link>
             <ul className='flex flex-col gap-4 text-xl font-bold leading-normal [&>li]:flex [&>li]:items-center [&>li]:gap-4'>
               <li>

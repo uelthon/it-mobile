@@ -1,8 +1,12 @@
 import React from 'react'
 
-const LogoWhite = () => {
+interface Props {
+  width?: string
+}
+
+const LogoWhite = ({ width = '345' }: Props) => {
   return (
-    <svg width='345' height='49' viewBox='0 0 345 49' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg width={width} height='49' viewBox='0 0 345 49' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <g clipPath='url(#clip0_89_323)'>
         <path d='M323.577 49H0L21.4315 0H345L323.577 49Z' fill='white' />
         <path d='M28.6055 13.1295H38.7909L33.21 30.5066H51.4511L50.2137 35.9128H27.2755C26.602 35.9128 25.9118 35.7365 25.2215 35.3755C24.5229 35.0145 23.9252 34.62 23.4286 34.1835C23.2518 34.0324 23.1171 33.7637 23.0245 33.386C22.9235 33.0082 22.8562 32.5885 22.8141 32.1351C22.772 31.6818 22.7636 31.2201 22.7804 30.75C22.8057 30.2799 22.8562 29.9021 22.9403 29.5915L28.6223 13.1211L28.6055 13.1295Z' fill='#1D1D1B' />

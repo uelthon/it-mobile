@@ -1,6 +1,5 @@
 import React from 'react'
 import Check from '@/components/shared/icons/check'
-import illustrations from '@/assets/images/image-1.webp'
 import pc from '@/assets/images/pc.webp'
 import Security from '@/components/shared/icons/security'
 import Hands from '@/components/shared/icons/hands'
@@ -8,22 +7,31 @@ import Repairs from '@/components/shared/icons/repairs'
 import PlusCircle from '@/components/shared/icons/plus-circle'
 import Support from '@/components/shared/icons/support'
 import Language from '@/components/shared/icons/language'
-import Tabs from '@/components/app/home/tabs'
+import Tabs from '@/components/app/home/tabs-v2'
 import { tabConstrols } from '@/constants/home-tab-control'
 import { useTranslations } from 'next-intl'
 import Link from 'next-intl/link'
+import hero from '@/assets/images/hero-section/hero-section.gif'
 
 export default function Home () {
   const t = useTranslations('home')
   return (
     <>
-      <section className='flex flex-col justify-start gap-3 px-3 md:p-0 md:max-w-[50%] md:items-end'>
-        <h1 className='text-[2.375rem] font-extrabold leading-[87%] max-w-md md:text-5xl'>
-          {t('title.line1')}<br /> <span className='text-it-blue-1'>{t('title.line2')}</span><br /> {t('title.line3')}
-        </h1>
-        <p className='text-2xl text-it-gray-2 leading-[87%] max-w-md'>
-          {t('price.line1')}<br /><span className='text-it-blue-1 [1.375rem] font-bold'>{t('price.line2')}</span>
-        </p>
+      <section className='flex justify-start items-center md:justify-end gap-8'>
+        <div className='flex flex-col justify-start gap-3 px-3 md:p-0 md:flex-shrink-0'>
+          <h1 className='text-[2.375rem] font-extrabold leading-[87%] max-w-md md:text-5xl'>
+            {t('title.line1')}<br /> <span className='text-it-blue-1'>{t('title.line2')}</span><br /> {t('title.line3')}
+          </h1>
+          <p className='text-2xl text-it-gray-2 leading-[87%] max-w-md'>
+            {t('price.line1')}<br /><Link href='/pricing' className='text-it-blue-1 [1.375rem] font-bold'>{t('price.line2')}</Link>
+          </p>
+        </div>
+        <img
+          className='hidden w-1/2 h-[280px] object-contain  md:block'
+          src={hero.src}
+          width={hero.width}
+          height={hero.height}
+        />
       </section>
       <section className='pl-3 relative overflow-hidden pb-8 w-full'>
         <p className='text-lg text-it-gray-2 leading-normal md:text-center'>Every plan includes:</p>
@@ -39,9 +47,9 @@ export default function Home () {
         </div>
         <img
           className='absolute -right-1/4 -bottom-4 w-72 md:w-1/2 md:h-full md:-right-4 md:top-1/2 md:-translate-y-1/2  object-contain -z-10 md:hidden'
-          src={illustrations.src}
-          width={illustrations.width}
-          height={illustrations.height}
+          src={hero.src}
+          width={hero.width}
+          height={hero.height}
         />
       </section>
       <section className='px-3 flex justify-center items-center gap-4 flex-wrap'>
@@ -50,7 +58,7 @@ export default function Home () {
           <span className='text-it-blue-1'>{t('pc.line-one')}</span><br /> {t('pc.line-two')}
         </h1>
       </section>
-      <section className='px-2 md:px-0 flex gap-4 justify-center flex-wrap'>
+      <section className='px-2 md:px-0 flex gap-8 justify-center flex-wrap'>
         <div className='it-card bg-it-gray-4'>
           <Security />
           <p>
