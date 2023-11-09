@@ -45,7 +45,7 @@ const Footer = () => {
             </ul>
           </section>
           <div className='border-b-2 border-solid border-it-gray-sky md:hidden' />
-          <section className='px-4 text-3xl font-bold md:px-0'>
+          <section className='px-4 text-2xl font-bold md:px-0'>
             <ul className='flex flex-col items-start gap-4'>
               <li>
                 <Link href='/services#tabs'>{t('footer.services')}</Link>
@@ -59,7 +59,7 @@ const Footer = () => {
             </ul>
           </section>
           <div className='border-b-2 border-solid border-it-gray-sky md:hidden' />
-          <section className='px-4 text-3xl font-bold md:px-0'>
+          <section className='px-4 text-2xl font-bold md:px-0'>
             <ul className='flex flex-col items-start gap-4'>
               <li>
                 <a>{t('footer.company')}</a>
@@ -76,7 +76,7 @@ const Footer = () => {
             </ul>
           </section>
           <div className='border-b-2 border-solid border-it-gray-sky md:hidden' />
-          <section className='px-4 text-3xl font-bold md:px-0'>
+          <section className='px-4 text-2xl font-bold md:px-0'>
             <ul className='flex flex-col items-start gap-4'>
               <li>
                 <Link href='/faq'>{t('footer.support')}</Link>
