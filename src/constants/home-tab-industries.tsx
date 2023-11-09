@@ -43,7 +43,7 @@ interface Industries {
 export const industries: Industries = {
   en: {
     none: {
-      title: '',
+      title: 'Automotive',
       data: [
         {
           id: 1,
@@ -282,7 +282,7 @@ export const industries: Industries = {
   },
   es: {
     none: {
-      title: '',
+      title: 'Automotor',
       data: [
         {
           id: 1,

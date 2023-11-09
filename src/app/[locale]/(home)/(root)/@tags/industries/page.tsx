@@ -7,10 +7,13 @@ export default function Industires () {
   const t = useTranslations('home')
   return (
     <section className='w-full flex flex-col items-center gap-8'>
-      <div>
-        <Industry
-          data={industries[t('locale')].none.data}
-        />
+      <div className='w-full flex justify-start md:justify-center'>
+        <div className='w-full md:w-1/2'>
+          <Industry
+            data={industries[t('locale')].none.data}
+            title={industries[t('locale')].none.title}
+          />
+        </div>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
         <Industry

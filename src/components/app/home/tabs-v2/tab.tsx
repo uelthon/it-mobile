@@ -22,9 +22,9 @@ export default function Tab ({
   return (
     <Link
       href={value}
-      className={`tab tab-bordered relative
+      className={`tab tab-bordered relative z-10
       ${className} ${includes.includes(pathname)
-        ? 'tab-active text-white font-bold before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-[95%] before:bg-it-black-1 before:-z-10'
+        ? 'tab-active text-white font-bold bg-it-black-1'
         : ''}`}
       scroll={false}
     >

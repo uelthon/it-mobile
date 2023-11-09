@@ -18,7 +18,7 @@ const Industry = ({ data = [], title = '' }: Props) => {
         {data.map(industry =>
           <button
             key={`industry-${title}-industry`}
-            className='btn-it h-[4.5rem]'
+            className='btn-it h-[4.5rem] justify-center text-2xl font-medium'
           >
             {industry.icon}
             <span>

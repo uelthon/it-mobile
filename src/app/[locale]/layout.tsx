@@ -28,7 +28,7 @@ export default function RootLayout ({
   unstable_setRequestLocale(locale)
   return (
     <html lang={locale} data-theme='corporate'>
-      <body className={`${aceh.variable} font-aceh`}>
+      <body className={`${aceh.variable} font-aceh bg-home`}>
         {children}
       </body>
     </html>
