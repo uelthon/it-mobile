@@ -22,7 +22,6 @@ export default function Services () {
             content={service.content}
             image={service.img}
             title={service.title}
-            video={service.video}
           />
         )}
       </section>
