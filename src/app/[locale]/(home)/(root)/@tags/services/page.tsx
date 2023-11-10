@@ -22,17 +22,20 @@ export default function Services () {
             content={service.content}
             image={service.img}
             title={service.title}
+            video={service.video}
           />
         )}
       </section>
       <section className='flex flex-col justify-start gap-8'>
         <div className='flex flex-col justify-start gap-2 pl-2 md:pl-0 md:text-center'>
-          <h1 className='text-6xl font-extrabold leading-[83%]'>{t('tab-services.text-one')}</h1>
+          <h1 className='text-6xl font-extrabold leading-[83%]'>
+            {t('tab-services.text-one.line-one')} <span className='text-it-blue-1'>{t('tab-services.text-one.line-two')}</span>
+          </h1>
           <p className='text-xl text-it-gray-2'>{t('tab-services.text-two')}</p>
         </div>
         <section className='flex items-center flex-wrap gap-4 px-2 md:px-0 md:gap-x-24 justify-between md:justify-center'>
           {brands.map((brand, i) =>
-            <img className='object-contain w-[9.125rem] h-[7.5rem]' key={`brands-${i}`} src={brand.src} width={brand.width} height={brand.height} />
+            <img className='object-contain w-[9.125rem] h-[7.5rem]' key={`brands-${i}`} src={brand.src} width={brand.width} height={brand.height} loading='lazy' />
           )}
         </section>
         <div className='flex justify-center'>
@@ -60,7 +63,7 @@ export default function Services () {
               <div className='absolute left-[2rem] -bottom-[2.77rem] z-[5]'>
                 <Sun />
               </div>
-              <img className='h-full object-contain z-10' src={woman.src} width={woman.width} height={woman.height} alt='woman' />
+              <img className='h-full object-contain z-10' src={woman.src} width={woman.width} height={woman.height} alt='woman' loading='lazy' />
               <div className='absolute top-[4.8rem] right-0'>
                 <LayerPurple />
               </div>

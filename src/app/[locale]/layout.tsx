@@ -1,11 +1,11 @@
 import { notFound } from 'next/navigation'
 import { unstable_setRequestLocale } from 'next-intl/server'
-import { aceh } from '@/styles/aceh-font'
-import '@/styles/globals.css'
 import { Metadata } from 'next'
+import { aceh } from '../../styles/aceh-font'
+import '../../styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'IT-mobile',
+  title: 'Managed IT Services - Lords of IT',
   description: 'Servicios de soporte administrado de IT'
 }
 
@@ -28,7 +28,7 @@ export default function RootLayout ({
   unstable_setRequestLocale(locale)
   return (
     <html lang={locale} data-theme='corporate'>
-      <body className={`${aceh.variable} font-aceh bg-home`}>
+      <body className={`${aceh.className} bg-home`}>
         {children}
       </body>
     </html>

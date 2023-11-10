@@ -1,0 +1,16 @@
+import brand from '@/assets/images/brands/brand.png'
+import brand10 from '@/assets/images/brands/brand10.png'
+import brand11 from '@/assets/images/brands/brand11.png'
+import brand12 from '@/assets/images/brands/brand12.png'
+import brand13 from '@/assets/images/brands/brand13.png'
+import brand14 from '@/assets/images/brands/brand14.png'
+import brand2 from '@/assets/images/brands/brand2.png'
+import brand3 from '@/assets/images/brands/brand3.png'
+import brand4 from '@/assets/images/brands/brand4.png'
+import brand5 from '@/assets/images/brands/brand5.png'
+import brand6 from '@/assets/images/brands/brand6.png'
+import brand7 from '@/assets/images/brands/brand7.png'
+import brand8 from '@/assets/images/brands/brand8.png'
+import brand9 from '@/assets/images/brands/brand9.png'
+
+export const brands = [brand14, brand13, brand12, brand11, brand10, brand9, brand8, brand7, brand6, brand5, brand4, brand3, brand2, brand]

@@ -1,5 +1,4 @@
 import React from 'react'
-import Check from '@/components/shared/icons/check'
 import pc from '@/assets/images/pc.webp'
 import Security from '@/components/shared/icons/security'
 import Hands from '@/components/shared/icons/hands'
@@ -11,7 +10,8 @@ import Tabs from '@/components/app/home/tabs-v2'
 import { tabConstrols } from '@/constants/home-tab-control'
 import { useTranslations } from 'next-intl'
 import Link from 'next-intl/link'
-import hero from '@/assets/images/hero-section/hero-section.gif'
+// import hero from '@/assets/images/hero-section/hero-section.gif'
+import PlanIncludesList from '@/components/app/home/plan-includes-list'
 
 export default function Home () {
   const t = useTranslations('home')
@@ -26,31 +26,41 @@ export default function Home () {
             {t('price.line1')}<br /><Link href='/pricing' className='text-it-blue-1 [1.375rem] font-bold'>{t('price.line2')}</Link>
           </p>
         </div>
-        <img
+        <video className='hidden w-1/2 h-[280px] object-contain  md:block' autoPlay loop controls={false} muted playsInline width={373} height={252}>
+          <source src='/images/hero-section.webm' type='video/webm' />
+        </video>
+        {/* <img
           className='hidden w-1/2 h-[280px] object-contain  md:block'
           src={hero.src}
           width={hero.width}
           height={hero.height}
-        />
+        /> */}
       </section>
       <section className='pl-3 relative overflow-hidden pb-8 w-full'>
         <p className='text-lg text-it-gray-2 leading-normal md:text-center'>{t('title-plan-includes')}</p>
         <div className='flex md:justify-center'>
           <ul className='grid grid-cols-1 justify-start [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:text-[2.375rem] [&>li]:leading-[100%] [&>li]:font-extrabold md:grid-cols-3 md:gap-x-20 md:gap-y-2 [&>li>svg]:text-it-blue-1'>
-            <li className='text-it-blue-1'><Check /> {t('plan-includes.item-zero')}</li>
-            <li><Check /> {t('plan-includes.item-one')}</li>
-            <li><Check /> {t('plan-includes.item-two')}</li>
-            <li><Check /> {t('plan-includes.item-three')}</li>
-            <li><Check /> {t('plan-includes.item-four')}</li>
-            <li><Check /> {t('plan-includes.item-five')}</li>
+            <PlanIncludesList
+              list={[
+                t('plan-includes.item-zero'),
+                t('plan-includes.item-one'),
+                t('plan-includes.item-two'),
+                t('plan-includes.item-three'),
+                t('plan-includes.item-four'),
+                t('plan-includes.item-five')
+              ]}
+            />
           </ul>
         </div>
-        <img
+        <video className='absolute -right-1/4 -bottom-4 w-72 md:w-1/2 md:h-full md:-right-4 md:top-1/2 md:-translate-y-1/2  object-contain -z-10 md:hidden' autoPlay loop controls={false} muted playsInline width={373} height={252}>
+          <source src='/images/hero-section.webm' type='video/webm' />
+        </video>
+        {/* <img
           className='absolute -right-1/4 -bottom-4 w-72 md:w-1/2 md:h-full md:-right-4 md:top-1/2 md:-translate-y-1/2  object-contain -z-10 md:hidden'
           src={hero.src}
           width={hero.width}
           height={hero.height}
-        />
+        /> */}
       </section>
       <section className='px-3 flex justify-center items-center gap-4 flex-wrap'>
         <img src={pc.src} width={pc.width} height={pc.height} />
@@ -110,7 +120,7 @@ export default function Home () {
           <Link href='/' locale={t('cards.language.locale')} className='btn w-56'>{t('cards.language.text-three')}</Link>
         </div>
       </section>
-      <h1 className='pl-4 text-it-blue-1 text-5xl font-extrabold md:text-center' id='tabs'>
+      <h1 className='pl-4 text-it-blue-1 text-6xl font-extrabold md:text-center' id='tabs'>
         {t('explore')}
       </h1>
       <section className='flex justify-center'>

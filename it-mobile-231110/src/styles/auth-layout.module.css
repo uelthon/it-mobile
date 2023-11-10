@@ -1,0 +1,6 @@
+.backgroundAuth{
+  fill: radial-gradient(148.34% 84.85% at 49.51% 12.59%, #FFF 0%, #F8F9F9 19%, #E6E9EB 46%, #CACFD3 76%, #AEB6BD 100%);
+  background-image: url('../../public/images/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
