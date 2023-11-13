@@ -1,7 +1,7 @@
 DirectoryIndex disabled 
 
 <filesMatch ".(jpg|jpeg|png|gif|ico|webp|webm|svg|woff2)$">
-Header set Cache-Control "max-age=2592000, public"
+Header set Cache-Control "max-age=31536000, public"
 </filesMatch>
 
 # Redirect traffic to your port 3015
