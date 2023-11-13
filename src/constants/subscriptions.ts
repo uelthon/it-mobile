@@ -1,9 +1,16 @@
+import { StaticImageData } from 'next/image'
 import logosix from '@/assets/images/subscriptions/logo-6.webp'
 import logofive from '@/assets/images/subscriptions/logo-5.webp'
 import logoseven from '@/assets/images/subscriptions/logo-7.webp'
 import logotwo from '@/assets/images/subscriptions/logo-2.webp'
 import logothree from '@/assets/images/subscriptions/logo-3.webp'
 import logofour from '@/assets/images/subscriptions/logo-4.webp'
+import contactOne from '@/assets/images/contact/contact-1.png'
+import contactTwo from '@/assets/images/contact/contact-2.png'
+import contactThree from '@/assets/images/contact/contact-3.png'
+import contactFour from '@/assets/images/contact/contact-4.png'
+import contactFive from '@/assets/images/contact/contact-5.png'
+import contactSix from '@/assets/images/contact/contact-6.png'
 
 interface Subscriptions {
   en: {
@@ -31,12 +38,45 @@ type Subscription = {
 } | {
   tag: 'assets'
   value: string[]
+} | {
+  tag: 'header'
+  value: string
+} | {
+  tag: 'details-list'
+  value: List
+} | {
+  tag: 'contact'
+  value: Contact
+} | {
+  tag: 'link'
+  value: Link
 }
 
 interface List {
   checkColor: string
   title?: string
   data: string[]
+}
+
+interface Contact {
+  title: string
+  image: StaticImageData
+  desc: {
+    content: string
+    span: string
+  }
+  tel: {
+    label: string
+    href: string
+  }
+  time: string
+}
+
+interface Link {
+  label: string
+  href: string
+  background: string
+  color: string
 }
 
 export const subscriptions: Subscriptions = {
@@ -67,6 +107,31 @@ export const subscriptions: Subscriptions = {
             'User Management.',
             'Remote Support.'
           ]
+        }
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contact Sales',
+          desc: {
+            content: 'Unlock Your Ultimate IT Experience',
+            span: 'Reach Out to Our Experts Now!'
+          },
+          image: contactSix,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Here for You, Monday to Friday, 9am-5pm EST. Contact us today!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Sign up',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
         }
       }
     ],
@@ -105,6 +170,31 @@ export const subscriptions: Subscriptions = {
       {
         tag: 'assets',
         value: [logosix.src, logofive.src, logoseven.src]
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contact Sales',
+          desc: {
+            content: 'Unlock Your Ultimate IT Experience',
+            span: 'Reach Out to Our Experts Now!'
+          },
+          image: contactFive,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Here for You, Monday to Friday, 9am-5pm EST. Contact us today!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Sign up',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
+        }
       }
     ],
     advanced: [
@@ -139,6 +229,31 @@ export const subscriptions: Subscriptions = {
             'Single Sign On.'
           ]
         }
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contact Sales',
+          desc: {
+            content: 'Unlock Your Ultimate IT Experience',
+            span: 'Reach Out to Our Experts Now!'
+          },
+          image: contactFour,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Here for You, Monday to Friday, 9am-5pm EST. Contact us today!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Sign up',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
+        }
       }
     ],
     one: [
@@ -157,6 +272,124 @@ export const subscriptions: Subscriptions = {
       {
         tag: 'assets',
         value: [logotwo.src]
+      },
+      {
+        tag: 'header',
+        value: 'Business Applications'
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Sales',
+            'CRM',
+            'Appointment Scheduling'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Marketing',
+            'Social Media Marketing',
+            'Marketing Automation',
+            'Engagement'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Communication',
+            'Email Hosting',
+            'Chat'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Collaboration',
+            'Project Management',
+            'Web Conferencing',
+            'File Management'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Productivity',
+            'Spreadsheets',
+            'Word Processor',
+            'Digital Signatures'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Finance',
+            'Accounting',
+            'Invoice Management',
+            'Expense Management',
+            'Payment Forms',
+            'Payroll'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Operations',
+            'Subscription Management',
+            'Inventory Management'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Human Resources',
+            'Recruitment',
+            'Inventory Management'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Business Process',
+            'Business Intelligence'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Legal',
+            'Contract Management'
+          ]
+        }
       },
       {
         tag: 'list',
@@ -197,6 +430,31 @@ export const subscriptions: Subscriptions = {
             'Updates & Backups.'
           ]
         }
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contact Sales',
+          desc: {
+            content: 'Unlock Your Ultimate IT Experience',
+            span: 'Reach Out to Our Experts Now!'
+          },
+          image: contactThree,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Here for You, Monday to Friday, 9am-5pm EST. Contact us today!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Sign up',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
+        }
       }
     ],
     cloud_server: [
@@ -235,6 +493,31 @@ export const subscriptions: Subscriptions = {
             'Scalability Load Balancing.',
             'Disaster Recovery.'
           ]
+        }
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contact Sales',
+          desc: {
+            content: 'Unlock Your Ultimate IT Experience',
+            span: 'Reach Out to Our Experts Now!'
+          },
+          image: contactTwo,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Here for You, Monday to Friday, 9am-5pm EST. Contact us today!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Sign up',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
         }
       }
     ],
@@ -275,6 +558,31 @@ export const subscriptions: Subscriptions = {
             'Remote Access.'
           ]
         }
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contact Sales',
+          desc: {
+            content: 'Unlock Your Ultimate IT Experience',
+            span: 'Reach Out to Our Experts Now!'
+          },
+          image: contactOne,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Here for You, Monday to Friday, 9am-5pm EST. Contact us today!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Sign up',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
+        }
       }
     ]
   },
@@ -305,6 +613,31 @@ export const subscriptions: Subscriptions = {
             'Gestión de Usuarios.',
             'Soporte Remoto.'
           ]
+        }
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contacta a Ventas',
+          desc: {
+            content: 'Desbloquea tu Experiencia TI Definitiva',
+            span: '¡Contáctanos ahora para hablar con nuestros expertos!'
+          },
+          image: contactSix,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Estamos aquí para ti de lunes a viernes, de 9 am a 5 pm, hora estándar del este. ¡Contáctanos hoy mismo!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Registrarse',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
         }
       }
     ],
@@ -343,6 +676,31 @@ export const subscriptions: Subscriptions = {
       {
         tag: 'assets',
         value: [logosix.src, logofive.src, logoseven.src]
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contacta a Ventas',
+          desc: {
+            content: 'Desbloquea tu Experiencia TI Definitiva',
+            span: '¡Contáctanos ahora para hablar con nuestros expertos!'
+          },
+          image: contactFive,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Estamos aquí para ti de lunes a viernes, de 9 am a 5 pm, hora estándar del este. ¡Contáctanos hoy mismo!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Registrarse',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
+        }
       }
     ],
     advanced: [
@@ -377,6 +735,31 @@ export const subscriptions: Subscriptions = {
             'Single Sign On.'
           ]
         }
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contacta a Ventas',
+          desc: {
+            content: 'Desbloquea tu Experiencia TI Definitiva',
+            span: '¡Contáctanos ahora para hablar con nuestros expertos!'
+          },
+          image: contactFour,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Estamos aquí para ti de lunes a viernes, de 9 am a 5 pm, hora estándar del este. ¡Contáctanos hoy mismo!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Registrarse',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
+        }
       }
     ],
     one: [
@@ -395,6 +778,123 @@ export const subscriptions: Subscriptions = {
       {
         tag: 'assets',
         value: [logotwo.src]
+      },
+      {
+        tag: 'header',
+        value: 'Business Applications'
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Ventas',
+            'CRM',
+            'Programación de Citas'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Marketing',
+            'Marketing en Redes Sociales',
+            'Automatización del Marketing',
+            'Compromiso (Engagement)'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Comunicación',
+            'Alojamiento de Correo Electrónico',
+            'Chat'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Colaboración',
+            'Gestión de Proyectos',
+            'Conferencias Web',
+            'Gestión de Archivos'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Productividad',
+            'Hojas de Cálculo',
+            'Procesador de Texto',
+            'Firmas Digitales'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Finanzas',
+            'Contabilidad',
+            'Gestión de Facturas',
+            'Gestión de Gastos',
+            'Formularios',
+            'Pago Nómina'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Operaciones',
+            'Gestión de Suscripciones',
+            'Gestión de Inventario'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Recursos Humanos',
+            'Contratación'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Procesos Empresariales',
+            'Inteligencia Empresarial'
+          ]
+        }
+      },
+      {
+        tag: 'details-list',
+        value: {
+          checkColor: 'text-it-yellow',
+          data: [
+            'Legal',
+            'Gestión de Contratos'
+          ]
+        }
       },
       {
         tag: 'list',
@@ -435,6 +935,31 @@ export const subscriptions: Subscriptions = {
             'Actualizaciones y Copias de Seguridad.'
           ]
         }
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contacta a Ventas',
+          desc: {
+            content: 'Desbloquea tu Experiencia TI Definitiva',
+            span: '¡Contáctanos ahora para hablar con nuestros expertos!'
+          },
+          image: contactThree,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Estamos aquí para ti de lunes a viernes, de 9 am a 5 pm, hora estándar del este. ¡Contáctanos hoy mismo!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Registrarse',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
+        }
       }
     ],
     cloud_server: [
@@ -474,6 +999,31 @@ export const subscriptions: Subscriptions = {
             'Recuperación ante Desastres.'
           ]
         }
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contacta a Ventas',
+          desc: {
+            content: 'Desbloquea tu Experiencia TI Definitiva',
+            span: '¡Contáctanos ahora para hablar con nuestros expertos!'
+          },
+          image: contactTwo,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Estamos aquí para ti de lunes a viernes, de 9 am a 5 pm, hora estándar del este. ¡Contáctanos hoy mismo!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Registrarse',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
+        }
       }
     ],
     network: [
@@ -512,6 +1062,31 @@ export const subscriptions: Subscriptions = {
             'Actualizaciones.',
             'Acceso Remoto.'
           ]
+        }
+      },
+      {
+        tag: 'contact',
+        value: {
+          title: 'Contacta a Ventas',
+          desc: {
+            content: 'Desbloquea tu Experiencia TI Definitiva',
+            span: '¡Contáctanos ahora para hablar con nuestros expertos!'
+          },
+          image: contactOne,
+          tel: {
+            label: '305 204-2754',
+            href: '13052042754'
+          },
+          time: 'Estamos aquí para ti de lunes a viernes, de 9 am a 5 pm, hora estándar del este. ¡Contáctanos hoy mismo!'
+        }
+      },
+      {
+        tag: 'link',
+        value: {
+          label: 'Registrarse',
+          href: '/auth/sign-up',
+          background: 'text-it-blue-1',
+          color: 'text-white'
         }
       }
     ]

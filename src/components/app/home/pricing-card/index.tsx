@@ -3,13 +3,18 @@ import React, { useState } from 'react'
 
 interface Props {
   children: React.ReactNode
+  locale?: 'en' | 'es'
 }
 
-export default function PricingCard ({ children }: Props) {
+export default function PricingCard ({ children, locale = 'en' }: Props) {
   const [show, setShow] = useState(false)
   return (
     <div
-      className={`relative border-solid border-[1px] border-it-black-1 py-[1.44rem] px-[1.75rem] flex flex-col justify-start gap-2 ${show ? '' : 'max-h-80 overflow-hidden'}`}
+      className={`relative border-solid border-[1px] border-it-black-1 py-[1.44rem] px-[1.75rem] flex flex-col justify-start gap-2 ${show
+        ? ''
+        : locale === 'en'
+        ? 'max-h-72 overflow-hidden'
+        : 'max-h-80 overflow-hidden'}`}
     >
       <p
         className='text-base font-bold leading-[87%] text-it-blue-1 cursor-pointer absolute top-4 right-4 z-[5]'
