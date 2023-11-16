@@ -1,12 +1,10 @@
-'use client'
-import Eye from '@/components/shared/icons/eye'
-import EyeOff from '@/components/shared/icons/eye-off'
-import React, { useState } from 'react'
+import React from 'react'
+import PasswordInput from '@/components/shared/password-input'
+import { login } from '@/actions/auth.actions'
 
 export default function FormLogin () {
-  const [show, setShow] = useState(false)
   return (
-    <form className='w-full flex flex-col justify-start gap-2'>
+    <form action={login} className='w-full flex flex-col justify-start gap-2'>
       <div className='form-control w-full'>
         <label className='label'>
           <span className='label-text text-base'>
@@ -27,21 +25,12 @@ export default function FormLogin () {
             Password
           </span>
         </label>
-        <div className='relative'>
-          <div
-            className='absolute top-1/2 -translate-y-1/2 right-4 cursor-pointer'
-            onClick={() => setShow(prev => !prev)}
-          >
-            {!show ? <Eye /> : <EyeOff />}
-          </div>
-          <input
-            type={!show ? 'password' : 'text'}
-            placeholder='********'
-            className='input input-bordered w-full rounded-full it-input-border'
-            name='password'
-            required
-          />
-        </div>
+        <PasswordInput
+          placeholder='********'
+          className='input input-bordered w-full rounded-full it-input-border text-base'
+          name='password'
+          required
+        />
       </div>
       <button className='btn btn-active btn-neutral rounded-full mt-2'>
         Login

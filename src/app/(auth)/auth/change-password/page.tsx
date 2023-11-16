@@ -3,7 +3,7 @@ import ChangePasswordForm from './client'
 
 export default function ChangePassword () {
   return (
-    <div className='flex flex-col justify-start gap-4 items-center'>
+    <div className='flex flex-col justify-start gap-4 items-center w-full'>
       <h1 className='text-3xl text-it-blue-1 font-bold'>
         New password
       </h1>

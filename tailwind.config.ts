@@ -18,7 +18,11 @@ const config: Config = {
         'it-red': '#FF4040',
         'it-purple': '#7666FF',
         'it-yellow': '#FFD500',
-        'it-gray-4': '#ECEAEA'
+        'it-gray-4': '#ECEAEA',
+        'it-white-smoke': '#F5F5F5',
+        'it-gray-5': '#757575',
+        'it-gray-6': '#CFCFCF',
+        'it-black-2': '#161616'
       }
     }
   },
