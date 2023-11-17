@@ -20,6 +20,7 @@ import { brands } from '@/constants/brands'
 import { industries } from '@/constants/home-tab-industries'
 import Industry from '../../(home)/(root)/@tags/industries/industry'
 import woman from '@/assets/images/woman.webp'
+import hero from '@/assets/images/hero.webp'
 
 export default function Home () {
   const t = useTranslations('home')
@@ -29,7 +30,7 @@ export default function Home () {
       <section
         style={{
           background: 'rgb(0,0,0)',
-          backgroundImage: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.05) 100%), url("images/hero.webp")',
+          backgroundImage: `linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.05) 100%), url(${hero.src})`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover'
