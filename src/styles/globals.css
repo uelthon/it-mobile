@@ -19,10 +19,23 @@
     -webkit-clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
     clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
   }
-}
-
-.bg-home{
-  background-image: url('../../public/images/bg-home.svg');
-  background-repeat: repeat;
-  background-size: auto;
+  .bg-hero{
+    background: rgb(0,0,0);
+    background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.05) 100%), url('../../public/images/hero.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bg-home{
+    background-image: url('../../public/images/bg-home.svg');
+    background-repeat: repeat;
+    background-size: auto;
+  }
+  .bg-banner{
+    background: rgb(0,0,0);
+    background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.05) 100%), url('../../public/images/banner.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
