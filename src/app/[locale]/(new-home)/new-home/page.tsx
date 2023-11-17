@@ -26,7 +26,16 @@ export default function Home () {
   return (
     <div className='w-full flex flex-col justify-start gap-12 min-h-screen mb-16'>
       {/* hero */}
-      <section className='bg-hero min-h-[47.625rem] relative py-4 px-2 md:px-0 flex flex-col justify-start gap-8 md:flex-row md:justify-center md:items-center md:gap-36'>
+      <section
+        style={{
+          background: 'rgb(0,0,0)',
+          backgroundImage: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.05) 100%), url("images/hero.webp")',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}
+        className='min-h-[47.625rem] relative py-4 px-2 md:px-0 flex flex-col justify-start gap-8 md:flex-row md:justify-center md:items-center md:gap-36'
+      >
         <div className='flex flex-col justify-start gap-7'>
           <header className='flex justify-center md:justify-start'>
             <Link href='/'><Logo width='100%' /></Link>
