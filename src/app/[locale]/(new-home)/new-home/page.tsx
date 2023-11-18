@@ -275,7 +275,7 @@ export default function Home () {
         </div>
       </section>
       {/* industries */}
-      <Industries />
+      <Industries locale={t('locale')} />
       {/* end */}
       <section className='flex flex-col justify-start items-center'>
         <div className='w-full md:max-w-[1210px] flex flex-col justify-start gap-6 md:flex-row md:justify-center md:items-end'>

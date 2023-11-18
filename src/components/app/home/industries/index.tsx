@@ -1,13 +1,11 @@
-import React from 'react'
+'use client'
+import React, { lazy } from 'react'
 // import Industry from './industry'
 // import { industries } from '@/constants/home-tab-industries'
-import { useTranslations } from 'next-intl'
+// import { useTranslations } from 'next-intl'
 import Await from '@/components/shared/await'
-import dynamic from 'next/dynamic'
 
-const IndustriesClient = dynamic(async () => await import('./industries-client'), {
-  ssr: false
-})
+const IndustriesClient = lazy(async () => await import('./industries-client'))
 
 // const Nodes = () => {
 //   const t = useTranslations('home')
@@ -49,19 +47,29 @@ const IndustriesClient = dynamic(async () => await import('./industries-client')
 //   )
 // }
 
-export default function Industries () {
-  const t = useTranslations('locale')
+interface Props {
+  locale: string
+}
+
+export default function Industries ({ locale }: Props) {
   return (
     <section className='flex flex-col justify-start gap-8 items-center'>
       <p className='text-[4.375rem] leading-[87%] text-center [&>span]:text-it-blue-1 font-extrabold'>
         <span>Industries</span> We Serve
       </p>
       <Await.Visible>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full md:max-w-[1210px]'>
-          <IndustriesClient
-            locale={t('lang')}
-          />
-        </div>
+        <Await.Suspense fallback={
+          <div className='w-full flex justify-center items-center'>
+            <span className='loading loading-spinner loading-lg text-neutral' />
+          </div>
+        }
+        >
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full md:max-w-[1210px]'>
+            <IndustriesClient
+              locale={locale}
+            />
+          </div>
+        </Await.Suspense>
       </Await.Visible>
     </section>
   )
