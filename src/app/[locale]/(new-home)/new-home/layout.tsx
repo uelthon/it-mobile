@@ -1,5 +1,7 @@
 import React from 'react'
 
+export const runtime = 'edge'
+
 export default function HomeLayout ({ children }: { children: React.ReactNode }) {
   return (
     <div className='w-full flex flex-col justify-start items-center'>

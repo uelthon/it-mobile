@@ -1,7 +1,5 @@
 import createMiddleware from 'next-intl/middleware'
 
-export const runtime = 'experimental-edge'
-
 export default createMiddleware({
   // A list of all locales that are supported
   locales: ['en', 'es'],
