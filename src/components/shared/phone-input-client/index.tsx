@@ -1,8 +1,7 @@
 'use client'
+import React from 'react'
 import { PhoneInput } from 'react-international-phone'
 import 'react-international-phone/style.css'
-
-import React from 'react'
 
 export default function PhoneInputClient () {
   return (
@@ -35,6 +34,10 @@ export default function PhoneInputClient () {
         name: 'phone',
         required: true
       }}
+      countries={[
+        ['United States', 'us', '1', '(...) ...-....', 0],
+        ['Nicaragua', 'ni', '505']
+      ]}
     />
   )
 }
