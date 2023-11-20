@@ -41,33 +41,34 @@ export default function Home () {
             <Link href='/'><Logo width='100%' /></Link>
           </header>
           <h1
-            className='text-6xl text-shadow-lg shadow-it-black-opacy font-extrabold text-white leading-[87%] [&>span]:text-it-blue-1 w-[300px] md:w-full'
+            className={`text-6xl text-shadow-lg shadow-it-black-opacy font-extrabold text-white leading-[87%] [&>span]:text-it-blue-1 w-[300px] ${t('locale') === 'en' ? 'md:w-full' : 'md:w-[34rem]'}`}
           >
-            Business <span>IT Support</span>
+            {t('header.text-one')} <span>{t('header.text-two')}</span>
           </h1>
           <p className='text-5xl text-shadow-lg shadow-it-black-opacy font-semibold text-white [&>span]:text-it-blue-1 leading-[87%]'>
-            Simplify IT with Our<br />
-            Comprehensive<br />
-            <span>All-Inclusive</span><br />
-            Subscription Plans.
+            {t('title.line1')}<br />
+            {t('title.line2')}<br />
+            <span>{t('title.line3')}<br />
+              {t('title.line4')}
+            </span>
           </p>
           <p className='text-2xl text-shadow-lg shadow-it-black-opacy font-normal leading-none text-white [&>a]:text-it-blue-1 [&>a]:font-bold'>
-            Starting at Just $49 per Month per User.<br /> <Link href='/pricing'>View Pricing</Link>
+            {t('price.line1')}<br /> <Link href='/pricing'>{t('price.line2')}</Link>
           </p>
         </div>
         <form className='max-w-sm p-6 rounded-2xl bg-white shadow-md flex flex-col justify-start'>
           <p className='text-3xl font-bold leading-none [&>span]:text-it-blue-1 text-center'>
-            Get a <span>Free</span><br /> Consultation
+            {t('form-contact.title.text-one')} <span>{t('form-contact.title.text-two')}</span><br /> {t('form-contact.title.text-three')}
           </p>
           <div className='form-control w-full'>
             <label className='label'>
               <span className='label-text text-base'>
-                Company Name
+                {t('form-contact.fields.company.label')}
               </span>
             </label>
             <input
               type='text'
-              placeholder='Enter the name of your business'
+              placeholder={t('form-contact.fields.company.place')}
               className='input input-bordered w-full rounded-full it-input-border'
               name='businessName'
               required
@@ -76,12 +77,12 @@ export default function Home () {
           <div className='form-control w-full'>
             <label className='label'>
               <span className='label-text text-base'>
-                Email Address
+                {t('form-contact.fields.email.label')}
               </span>
             </label>
             <input
               type='email'
-              placeholder='example@mail.com'
+              placeholder={t('form-contact.fields.email.place')}
               className='input input-bordered w-full rounded-full it-input-border'
               name='email'
               required
@@ -90,7 +91,7 @@ export default function Home () {
           <div className='form-control w-full'>
             <label className='label'>
               <span className='label-text text-base'>
-                Phone Number
+                {t('form-contact.fields.phone.label')}
               </span>
             </label>
             <PhoneInputClient />
@@ -98,12 +99,12 @@ export default function Home () {
           <div className='form-control w-full'>
             <label className='label'>
               <span className='label-text text-base'>
-                Website URL
+                {t('form-contact.fields.website.label')}
               </span>
             </label>
             <input
               type='text'
-              placeholder='Enter your website address'
+              placeholder={t('form-contact.fields.website.place')}
               className='input input-bordered w-full rounded-full it-input-border'
               name='website'
             />
@@ -111,19 +112,19 @@ export default function Home () {
           <div className='form-control w-full'>
             <label className='label'>
               <span className='label-text text-base'>
-                Your Name
+                {t('form-contact.fields.name.label')}
               </span>
             </label>
             <input
               type='text'
-              placeholder='Enter your Name'
+              placeholder={t('form-contact.fields.name.place')}
               className='input input-bordered w-full rounded-full it-input-border'
               name='fullName'
               required
             />
           </div>
           <button type='submit' className='btn btn-active btn-neutral rounded-full mt-4 capitalize'>
-            Request
+            {t('form-contact.submit')}
           </button>
         </form>
         <div
@@ -132,7 +133,7 @@ export default function Home () {
           <p
             className='text-xl text-it-green-1 font-extrabold leading-[87%] text-center'
           >
-            Ready<br /> to Chat?
+            {t('chat.line-one')}<br /> {t('chat.line-two')}
           </p>
           <a href='https://wa.me/13052042754' target='_blank' rel='noreferrer'>
             <WhatsappLogo />
@@ -142,11 +143,11 @@ export default function Home () {
       {/* section two */}
       <section className='flex flex-col justify-start gap-6 px-2 md:px-0'>
         <h2 className='text-6xl text-center font-extrabold text-black leading-[87%] [&>span]:text-it-blue-1'>
-          <span>IT Services</span> Provider
+          <span>{t('it-provider.text-one')}</span> {t('it-provider.text-two')}
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-3 md:items-center gap-6 md:gap-12'>
           <p className='text-5xl font-extrabold leading-[87%] [&>span]:text-it-blue-1 text-left md:text-right'>
-            <span>You handle<br /> your business</span><br /> We handle<br /> your IT.
+            <span>{t('pc.line-one')}<br /> {t('pc.line-two')}</span><br /> {t('pc.line-three')}<br /> {t('pc.line-four')}
           </p>
           <div className='flex flex-col justify-start items-center gap-4'>
             <img src={pc.src} width={pc.width} height={pc.height} />
@@ -155,18 +156,18 @@ export default function Home () {
               className='w-full btn btn-active btn-neutral rounded-full mt-4 capitalize'
               target='_blank' rel='noreferrer'
             >
-              <span className='w-6 h-6 flex justify-center items-center bg-white rounded-full text-[#0b0c13]'><Phone width='12' height='13' /></span> Request a Callback
+              <span className='w-6 h-6 flex justify-center items-center bg-white rounded-full text-[#0b0c13]'><Phone width='12' height='13' /></span> {t('callback')}
             </a>
           </div>
           <ul className='grid grid-cols-1 justify-start [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:text-[2.375rem] [&>li]:leading-[100%] [&>li]:font-extrabold [&>li>svg]:text-it-blue-1'>
             <PlanIncludesList
               list={[
-                'Setup',
-                'Onboarding',
-                'Backup',
-                'Security',
-                'Support',
-                'Update'
+                t('plan-includes.item-zero'),
+                t('plan-includes.item-one'),
+                t('plan-includes.item-two'),
+                t('plan-includes.item-three'),
+                t('plan-includes.item-four'),
+                t('plan-includes.item-five')
               ]}
             />
           </ul>
@@ -177,7 +178,7 @@ export default function Home () {
         <p
           className='text-6xl text-center font-extrabold text-black leading-[87%] [&>span]:text-it-blue-1 z-10'
         >
-          What makes us<br /> <span>different?</span>
+          {t('cards-title.line-one')}<br /> <span>{t('cards-title.line-two')}</span>
         </p>
         <img
           className='hidden absolute top-0 left-[7.88rem] z-[5] lg:block'
@@ -246,17 +247,17 @@ export default function Home () {
       </section>
       {/* banner */}
       <section className='bg-banner h-[35.5rem] flex flex-col justify-center items-center gap-10 px-2 md:px-0'>
-        <p className='text-7xl md:text-[5.625rem] text-shadow-lg shadow-it-black-opacy font-extrabold leading-[87%] text-white text-center [&>span]:text-it-blue-1'>
-          Managed IT<br /> <span>Service Provider</span>
+        <p className='text-6xl md:text-[5.625rem] text-shadow-lg shadow-it-black-opacy font-extrabold leading-[87%] text-white text-center [&>span]:text-it-blue-1 w-full md:max-w-[1210px]'>
+          {t('banner.title.line-one')}<br /> <span>{t('banner.title.line-two')}</span>
         </p>
-        <p className='text-3xl leading-[87%] text-white text-center'>With our Innovative Solutions.</p>
+        <p className='text-3xl leading-[87%] text-white text-center'>{t('banner.sub-title')}</p>
         <div className='w-[19rem]'>
           <a
             href='tel:+13052042754'
             className='w-full btn btn-active rounded-full mt-4 capitalize'
             target='_blank' rel='noreferrer'
           >
-            <span className='w-6 h-6 flex justify-center items-center rounded-full bg-black text-white'><Phone width='12' height='13' /></span> Request a Callback
+            <span className='w-6 h-6 flex justify-center items-center rounded-full bg-black text-white'><Phone width='12' height='13' /></span> {t('callback')}
           </a>
         </div>
       </section>
@@ -275,23 +276,28 @@ export default function Home () {
         </div>
       </section>
       {/* industries */}
-      <Industries locale={t('locale')} />
+      <section className='flex flex-col justify-start gap-8 items-center'>
+        <p className='text-[4.375rem] leading-[87%] text-center [&>span]:text-it-blue-1 font-extrabold'>
+          <span>{t('tab-industries.text-one')}</span> {t('tab-industries.text-two')}
+        </p>
+        <Industries locale={t('locale')} />
+      </section>
       {/* end */}
       <section className='flex flex-col justify-start items-center'>
         <div className='w-full md:max-w-[1210px] flex flex-col justify-start gap-6 md:flex-row md:justify-center md:items-end'>
           <div className='px-2 md:px-0'>
             <p className='text-6xl md:text-[7rem] font-extrabold leading-[87%] [&>span]:text-it-blue-1'>
-              Embrace<br /> <span>the Future</span>
+              {t('future.title.line-one')}<br /> <span>{t('future.title.line-two')}</span>
             </p>
             <p className='text-lg md:text-2xl text-it-gray-1'>
-              Building Tomorrow's Success Today on<br /> the Cloud.
+              {t('future.sub-title.line-one')}<br /> {t('future.sub-title.line-two')}
             </p>
             <a
               href='tel:+13052042754'
               className='w-full md:max-w-[18rem] btn btn-active btn-neutral rounded-full mt-4 capitalize'
               target='_blank' rel='noreferrer'
             >
-              <span className='w-6 h-6 flex justify-center items-center bg-white rounded-full text-[#0b0c13]'><Phone width='12' height='13' /></span> Request a Callback
+              <span className='w-6 h-6 flex justify-center items-center bg-white rounded-full text-[#0b0c13]'><Phone width='12' height='13' /></span> {t('callback')}
             </a>
           </div>
           <div

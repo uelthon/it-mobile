@@ -4,10 +4,48 @@
   },
   "home": {
     "locale": "en",
+    "header": {
+      "text-one": "Business ",
+      "text-two": "IT Support"
+    },
     "title": {
-      "line1": "Simplify IT with Our Comprehensive",
-      "line2": "All-Inclusive",
-      "line3": "Subscription Plans."
+      "line1": "Simplify IT with Our",
+      "line2": "Comprehensive",
+      "line3": "All-Inclusive",
+      "line4": "Subscription Plans."
+    },
+    "form-contact": {
+      "title": {
+        "text-one": "Get a",
+        "text-two": "Free",
+        "text-three": "Consultation"
+      },
+      "fields": {
+        "company": {
+          "label": "Company Name",
+          "place": "Company name"
+        },
+        "email": {
+          "label": "Email Address",
+          "place": "yourname@yourcompany.com"
+        },
+        "phone": {
+          "label": "Phone Number"
+        },
+        "website": {
+          "label": "Website URL",
+          "place": "www.yourcompany.com" 
+        },
+        "name": {
+          "label": "Your Name",
+          "place": "Enter your Name"
+        }
+      },
+      "submit": "Request"
+    },
+    "chat": {
+      "line-one": "Ready",
+      "line-two": "to Chat?"
     },
     "price": {
       "line1": "Starting at Just $49 per Month per User. ",
@@ -22,9 +60,20 @@
       "item-four": "Support",
       "item-five": "Update"
     },
+    "it-provider": {
+      "text-one": "IT Services",
+      "text-two": "Provider"
+    },
     "pc": {
-      "line-one": "You handle your business",
-      "line-two": "We handle your IT."
+      "line-one": "You handle",
+      "line-two": "your business",
+      "line-three": "We handle",
+      "line-four": "your IT."
+    },
+    "callback": "Request a Callback",
+    "cards-title": {
+      "line-one": "What makes us",
+      "line-two": "different?"
     },
     "cards": {
       "security": {
@@ -56,6 +105,13 @@
         "locale": "es"
       }
     },
+    "banner": {
+      "title": {
+        "line-one": "Managed IT",
+        "line-two": "Service Provider"
+      },
+      "sub-title": "With our Innovative Solutions."
+    },
     "explore": "Explore",
     "tabs": {
       "services": "Services",
@@ -75,6 +131,20 @@
       },
       "text-five": "Building Tomorrow's Success Today on the Cloud.",
       "text-six": "Contact Sales"
+    },
+    "tab-industries": {
+      "text-one": "Industries",
+      "text-two": "We Serve"
+    },
+    "future": {
+      "title": {
+        "line-one": "Embrace",
+        "line-two": "the Future"
+      },
+      "sub-title": {
+        "line-one": "Building Tomorrow's Success Today on",
+        "line-two": "the Cloud."
+      }
     },
     "footer": {
       "address": {

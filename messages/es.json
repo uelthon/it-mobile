@@ -4,10 +4,48 @@
   },
   "home": {
     "locale": "es",
+    "header": {
+      "text-one": "Soporte TI",
+      "text-two": "para Negocios"
+    },
     "title": {
-      "line1": "Simplifica la tecnología con",
-      "line2": "nuestros planes de suscripción todo",
-      "line3": "incluido."
+      "line1": "Simplifica la tecnología de",
+      "line2": "la información con nuestros",
+      "line3": "Planes de Suscripción todo",
+      "line4": "incluido."
+    },
+    "form-contact": {
+      "title": {
+        "text-one": "Obtén",
+        "text-two": "una",
+        "text-three": "Consulta Gratis"
+      },
+      "fields": {
+        "company": {
+          "label": "Nombre de la Compañía",
+          "place": "Nombre de la compañía"
+        },
+        "email": {
+          "label": "Correo electrónico",
+          "place": "tucorreo@tucompania.com"
+        },
+        "phone": {
+          "label": "Número de teléfono"
+        },
+        "website": {
+          "label": "Dirección web",
+          "place": "www.tucompania.com" 
+        },
+        "name": {
+          "label": "Nombre",
+          "place": "Tu nombre"
+        }
+      },
+      "submit": "Solicitar"
+    },
+    "chat": {
+      "line-one": "¿Listo para",
+      "line-two": "Chatear?"
     },
     "price": {
       "line1": "Desde solo $49 al mes por usuario.",
@@ -22,9 +60,20 @@
       "item-four": "Soporte",
       "item-five": "Actualizacion"
     },
+    "it-provider": {
+      "text-one": "Proveedor de",
+      "text-two": "Servicios TI"
+    },
     "pc": {
-      "line-one": "Tú manejas tu negocio.",
-      "line-two": "Nosotros la tecnología."
+      "line-one": "Tú manejas",
+      "line-two": "tu negocio.",
+      "line-three": "Nosotros",
+      "line-four": "la tecnología."
+    },
+    "callback": "Solicita una Llamada",
+    "cards-title": {
+      "line-one": "¿Qué nos hace",
+      "line-two": "diferentes?"
     },
     "cards": {
       "security": {
@@ -56,6 +105,13 @@
         "locale": "en"
       }
     },
+    "banner": {
+      "title": {
+        "line-one": "Proveedor de Servicios",
+        "line-two": "de TI Gestionados"
+      },
+      "sub-title": "Con nuestras Innovativas Soluciones."
+    },
     "explore": "Explorar",
     "tabs": {
       "services": "Services",
@@ -64,8 +120,8 @@
     },
     "tab-services": {
       "text-one": {
-        "line-one": "Expanded",
-        "line-two": "Portfolio"
+        "line-one": "Portafolio",
+        "line-two": "Expandido"
       },
       "text-two": "Desbloqueando el Potencial Completo de tu Negocio.",
       "text-three": "Ver todos",
@@ -75,6 +131,20 @@
       },
       "text-five": "Construyendo el Éxito del Mañana Hoy en la Nube.",
       "text-six": "Contacta a Ventas"
+    },
+    "tab-industries": {
+      "text-one": "Industrias",
+      "text-two": "a las que servimos"
+    },
+    "future": {
+      "title": {
+        "line-one": "Abraza",
+        "line-two": "el Futuro"
+      },
+      "sub-title": {
+        "line-one": "Construyendo el éxito de mañana hoy en",
+        "line-two": "la nube."
+      }
     },
     "footer": {
       "address": {

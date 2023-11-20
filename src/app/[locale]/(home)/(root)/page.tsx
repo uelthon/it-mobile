@@ -64,8 +64,8 @@ export default function Home () {
       </section>
       <section className='px-3 flex justify-center items-center gap-4 flex-wrap'>
         <img src={pc.src} width={pc.width} height={pc.height} />
-        <h1 className='text-5xl font-extrabold leading-[87%] text-center max-w-xs'>
-          <span className='text-it-blue-1'>{t('pc.line-one')}</span><br /> {t('pc.line-two')}
+        <h1 className='text-5xl font-extrabold leading-[87%] [&>span]:text-it-blue-1 text-center max-w-xs'>
+          <span>{t('pc.line-one')}<br /> {t('pc.line-two')}</span><br /> {t('pc.line-three')}<br /> {t('pc.line-four')}
         </h1>
       </section>
       <section className='px-2 md:px-0 flex gap-8 justify-center flex-wrap'>
