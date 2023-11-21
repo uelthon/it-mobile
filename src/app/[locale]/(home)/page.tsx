@@ -233,7 +233,7 @@ export default function Home () {
           <div className='it-card bg-it-purple'>
             <Language />
             <p>{t('cards.language.text-one')} <span className='text-white'>{t('cards.language.text-two')}</span></p>
-            <Link href='/new-home' locale={t('cards.language.locale')} className='btn w-56'>{t('cards.language.text-three')}</Link>
+            <Link href='/' locale={t('cards.language.locale')} className='btn w-56'>{t('cards.language.text-three')}</Link>
           </div>
         </div>
         <img

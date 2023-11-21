@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation'
 import { unstable_setRequestLocale } from 'next-intl/server'
 import { Metadata } from 'next'
 import { GoogleTagManager } from '@next/third-parties/google'
+import Header from '@/components/app/home/header'
+import Footer from '@/components/app/home/footer'
 import { aceh } from '../../styles/aceh-font'
 import '../../styles/globals.css'
 
@@ -30,7 +32,9 @@ export default function RootLayout ({
   return (
     <html lang={locale} data-theme='corporate'>
       <body className={`${aceh.className} bg-home`}>
+        <Header />
         {children}
+        <Footer />
       </body>
       <GoogleTagManager gtmId='GTM-WLT67CWP' />
     </html>
