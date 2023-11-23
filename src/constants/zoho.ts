@@ -1,0 +1,5 @@
+export const ZOHO_ACCOUNTS_URL = 'https://accounts.zoho.com'
+export const ZOHO_BASE_URL = 'https://www.zohoapis.com'
+export const ZOHO_CLIENT_ID = '1000.8P52S61FW03WPIEX87Z0VBSYGEEJ0R'
+export const ZOHO_SECRET_ID = '1db96b4f45570aa8b0cf7e3cc1115a6d98a6486352'
+export const ZOHO_REFRESH_TOKEN = '1000.882eea49fe50256ef777f373a9475d03.5a20f37fcd79c086d1d89ef3161c6e80'

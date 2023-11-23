@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next-intl/link'
+import { Link } from '@/libs/navigation'
 import { useTranslations } from 'next-intl'
 import { brands } from '@/constants/brands'
 import Industries from '@/components/app/home/industries'
@@ -20,6 +20,9 @@ import sunbg from '@/assets/images/sunbg.webp'
 import red from '@/assets/images/red.webp'
 import woman from '@/assets/images/woman.webp'
 import hero from '@/assets/images/hero.webp'
+import { createContact } from '@/actions/zoho.actions'
+import Submit from '@/components/shared/submit'
+import Form from '@/components/shared/form'
 
 export default function Home () {
   const t = useTranslations('home')
@@ -56,7 +59,7 @@ export default function Home () {
             {t('price.line1')}<br /> <Link href='/pricing'>{t('price.line2')}</Link>
           </p>
         </div>
-        <form className='max-w-sm p-6 rounded-2xl bg-white shadow-md flex flex-col justify-start'>
+        <Form serverAction={createContact} className='max-w-sm p-6 rounded-2xl bg-white shadow-md flex flex-col justify-start'>
           <p className='text-3xl font-bold leading-none [&>span]:text-it-blue-1 text-center'>
             {t('form-contact.title.text-one')} <span>{t('form-contact.title.text-two')}</span><br /> {t('form-contact.title.text-three')}
           </p>
@@ -123,10 +126,13 @@ export default function Home () {
               required
             />
           </div>
-          <button type='submit' className='btn btn-active btn-neutral rounded-full mt-4 capitalize'>
-            {t('form-contact.submit')}
-          </button>
-        </form>
+          <Submit
+            type='submit'
+            className='btn btn-active btn-neutral rounded-full mt-4 capitalize'
+            label={t('form-contact.submit')}
+            loading={<span className='loading loading-dots loading-sm' />}
+          />
+        </Form>
         <div
           className='hidden md:flex flex-col items-center justify-start gap-2 absolute bottom-24 right-12'
         >
@@ -233,7 +239,7 @@ export default function Home () {
           <div className='it-card bg-it-purple'>
             <Language />
             <p>{t('cards.language.text-one')} <span className='text-white'>{t('cards.language.text-two')}</span></p>
-            <Link href='/' locale={t('cards.language.locale')} className='btn w-56'>{t('cards.language.text-three')}</Link>
+            <Link href='/' locale={t('cards.language.locale') as 'en' | 'es'} className='btn w-56'>{t('cards.language.text-three')}</Link>
           </div>
         </div>
         <img
