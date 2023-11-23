@@ -31,7 +31,7 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <a href='/auth/login'>
+          <a href='/'>
             <Avatar />
           </a>
         </li>
