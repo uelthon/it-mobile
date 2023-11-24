@@ -157,13 +157,13 @@ export default function Home () {
           </p>
           <div className='flex flex-col justify-start items-center gap-4'>
             <img src={pc.src} width={pc.width} height={pc.height} />
-            <a
-              href='tel:+13052042754'
+            <Link
+              href='/request-a-call'
               className='w-full btn btn-active btn-neutral rounded-full mt-4 capitalize'
-              target='_blank' rel='noreferrer'
+              scroll={false}
             >
               <span className='w-6 h-6 flex justify-center items-center bg-white rounded-full text-[#0b0c13]'><Phone width='12' height='13' /></span> {t('callback')}
-            </a>
+            </Link>
           </div>
           <ul className='grid grid-cols-1 justify-start [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:text-[2.375rem] [&>li]:leading-[100%] [&>li]:font-extrabold [&>li>svg]:text-it-blue-1'>
             <PlanIncludesList
@@ -258,13 +258,13 @@ export default function Home () {
         </p>
         <p className='text-3xl leading-[87%] text-white text-center'>{t('banner.sub-title')}</p>
         <div className='w-[19rem]'>
-          <a
-            href='tel:+13052042754'
+          <Link
+            href='/request-a-call'
             className='w-full btn btn-active rounded-full mt-4 capitalize'
-            target='_blank' rel='noreferrer'
+            scroll={false}
           >
             <span className='w-6 h-6 flex justify-center items-center rounded-full bg-black text-white'><Phone width='12' height='13' /></span> {t('callback')}
-          </a>
+          </Link>
         </div>
       </section>
       {/* brands */}
@@ -298,13 +298,13 @@ export default function Home () {
             <p className='text-lg md:text-2xl text-it-gray-1'>
               {t('future.sub-title.line-one')}<br /> {t('future.sub-title.line-two')}
             </p>
-            <a
-              href='tel:+13052042754'
+            <Link
+              href='/request-a-call'
               className='w-full md:max-w-[18rem] btn btn-active btn-neutral rounded-full mt-4 capitalize'
-              target='_blank' rel='noreferrer'
+              scroll={false}
             >
               <span className='w-6 h-6 flex justify-center items-center bg-white rounded-full text-[#0b0c13]'><Phone width='12' height='13' /></span> {t('callback')}
-            </a>
+            </Link>
           </div>
           <div
             style={{

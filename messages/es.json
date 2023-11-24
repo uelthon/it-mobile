@@ -146,6 +146,12 @@
         "line-two": "la nube."
       }
     },
+    "request-call": {
+      "title": {
+        "line-one": "Solicitar una",
+        "line-two": "Llamada"
+      }
+    },
     "footer": {
       "address": {
         "text-one": "323 Sunny Isles Blvd 7th Floor,",
