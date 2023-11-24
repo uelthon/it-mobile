@@ -83,8 +83,8 @@ export const createContact = async (currentState = { error: null, data: null }, 
           Account_Name: {
             id: dataCompany.data[0].details.id
           },
-          First_Name: firstName,
-          Last_Name: lastName,
+          First_Name: lastName ? firstName : '',
+          Last_Name: lastName || firstName,
           Email: contact.email,
           Mobile: contact.phone,
           Phone: contact.phone,
@@ -170,8 +170,8 @@ export const createCall = async (currentState = { error: null, data: null }, for
           Account_Name: {
             id: dataCompany.data[0].details.id
           },
-          First_Name: firstName,
-          Last_Name: lastName,
+          First_Name: lastName ? firstName : '',
+          Last_Name: lastName || firstName,
           Mobile: contact.phone,
           Phone: contact.phone,
           Description: 'Request a CallBack'
