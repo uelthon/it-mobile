@@ -13,7 +13,7 @@ export default function ContainerSidebar ({ children }: { children: React.ReactN
       >
         <Close />
       </button>
-      <div className='w-64 h-full' onClick={(e) => e.stopPropagation()}>
+      <div className='w-72 md:w-64 h-full' onClick={(e) => e.stopPropagation()}>
         {children}
       </div>
     </div>

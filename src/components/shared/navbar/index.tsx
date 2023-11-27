@@ -2,8 +2,12 @@ import React from 'react'
 import Notification from '@/components/shared/icons/notification'
 import Logout from './Logout'
 import MenuToggle from './menu-toggle'
+import { getUser } from '@/actions/auth.actions'
 
 export default async function Navbar () {
+  const { data } = await getUser()
+  const name = data?.user_metadata?.full_name as string || ''
+  const bussiness = data?.user_metadata?.business_name as string
   return (
     <nav className='sticky top-0 left-0 p-4 bg-it-white-smoke z-10'>
       <div className='flex justify-between items-center'>
@@ -11,7 +15,7 @@ export default async function Navbar () {
           <MenuToggle />
           <div className='hidden sm:block'>
             <p className='text-xl font-semibold'>
-              Hola, Charles
+              Hola, {name.split(' ')[0]}
             </p>
             <p className='text-sm font-normal text-it-gray-5'>Have a nice day</p>
           </div>
@@ -32,9 +36,11 @@ export default async function Navbar () {
                   </div>
                   <div>
                     <p className='font-semibold text-base'>
-                      Charles Smith
+                      {name}
                     </p>
-                    <p className='text-xs font-normal'>Company Name</p>
+                    <p className='text-xs font-normal'>
+                      {bussiness}
+                    </p>
                   </div>
                 </summary>
                 <ul className='p-2 bg-base-100'>

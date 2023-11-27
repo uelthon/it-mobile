@@ -3,10 +3,12 @@ import { cookies } from 'next/headers'
 import * as z from 'zod'
 import supabaseAction from '@/libs/supabase/supabase-action'
 import supabaseAdmin from '@/libs/supabase/supabase-admin'
+import supabaseServer from '@/libs/supabase/supabase-server'
 import cleanPhoneNumber from '@/libs/clean-phone-number'
+import { revalidatePath } from 'next/cache'
 
 export const getSession = async () => {
-  const supabase = supabaseAction({ cookies })
+  const supabase = supabaseServer({ cookies })
   const { data: { session }, error } = await supabase.auth.getSession()
   if (error || !session) {
     return {
@@ -21,7 +23,7 @@ export const getSession = async () => {
 }
 
 export const getUser = async () => {
-  const supabase = supabaseAction({ cookies })
+  const supabase = supabaseServer({ cookies })
   const { data: { user }, error } = await supabase.auth.getUser()
   if (error || !user) {
     return {
@@ -129,5 +131,49 @@ export const createUser = async (formData: FormData) => {
       error: 'supabase server error',
       data: null
     }
+  }
+}
+
+export const getTermsOfServices = async () => {
+  const { data, error } = await getSession()
+  if (error || !data) {
+    return {
+      error,
+      data: null
+    }
+  }
+  const userId = data.user.id
+  const supabase = supabaseServer({ cookies })
+  const { data: dataTerms, error: errorTerms } = await supabase.from('terms_of_services')
+    .select('*')
+    .eq('user_id', userId)
+  return {
+    data: dataTerms,
+    error: errorTerms
+  }
+}
+
+export const agreeTermsOfServices = async (currentState = { error: null, data: null }, formData: FormData) => {
+  const { data, error } = await getSession()
+  if (error || !data) {
+    return {
+      error,
+      data: null
+    }
+  }
+  const supabase = supabaseAction({ cookies })
+  const { data: dataTerms, error: errorTerms } = await supabase.from('terms_of_services').insert({
+    isAgree: true
+  }).select('*')
+  if (errorTerms || !dataTerms) {
+    return {
+      error: errorTerms?.message || 'server error',
+      data: null
+    }
+  }
+  revalidatePath('/dashboard/customer-admin')
+  return {
+    data: dataTerms,
+    error: null
   }
 }

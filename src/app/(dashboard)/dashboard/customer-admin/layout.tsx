@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Metadata } from 'next'
 import { aceh } from '../../../../styles/aceh-font'
 import '../../../../styles/globals.css'
@@ -7,6 +7,8 @@ import Sidebar from '@/components/shared/sidebar'
 import { SidebarProvider } from '@/providers/sidebar'
 import { getUser } from '@/actions/auth.actions'
 import { redirect } from 'next/navigation'
+import TermsOfServices from '@/components/app/dashboard-customer-admin/terms-of-services'
+import Sonner from '@/components/shared/sonner'
 
 export const metadata: Metadata = {
   title: 'Managed IT Services - Lords of IT',
@@ -41,6 +43,10 @@ export default async function DashboardLayout ({ children }: Props) {
             </div>
           </div>
         </SidebarProvider>
+        <Sonner position='bottom-right' richColors />
+        <Suspense>
+          <TermsOfServices />
+        </Suspense>
       </body>
     </html>
   )

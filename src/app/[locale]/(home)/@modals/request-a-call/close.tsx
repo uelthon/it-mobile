@@ -6,10 +6,10 @@ export default function Close () {
   const router = useRouter()
   return (
     <button
-      className='btn btn-xs btn-circle btn-error text-opacity-70 absolute top-2 right-3'
       onClick={() => router.back()}
+      className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2 font-sans'
     >
-      x
+      ✕
     </button>
   )
 }
