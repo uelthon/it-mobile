@@ -1,18 +1,24 @@
 import React from 'react'
+import Link from 'next/link'
+import Logo from '@/components/shared/icons/logo'
 
-export default function HomeLayout ({
-  children,
-  modals
-}: {
+interface Props {
   children: React.ReactNode
-  modals: React.ReactNode
-}) {
+}
+
+export default function OtherLayout ({ children }: Props) {
   return (
-    <div className='w-full flex flex-col justify-start items-center'>
-      <main className='w-full md:max-w-[1550px]'>
-        {children}
+    <>
+      <header className='w-full flex justify-center pt-12 pb-8'>
+        <Link href='/'><Logo width='320' /></Link>
+      </header>
+      <main className='w-full flex flex-col justify-start items-center mb-12'>
+        <div className='w-full md:max-w-[1210px]'>
+          <div className='w-full flex flex-col justify-start gap-7 py-7'>
+            {children}
+          </div>
+        </div>
       </main>
-      {modals}
-    </div>
+    </>
   )
 }

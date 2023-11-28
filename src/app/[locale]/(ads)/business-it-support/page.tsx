@@ -158,7 +158,7 @@ export default function Home () {
           <div className='flex flex-col justify-start items-center gap-4'>
             <img src={pc.src} width={pc.width} height={pc.height} />
             <Link
-              href='/request-a-call'
+              href='/business-it-support/request-a-call'
               className='w-full btn btn-active btn-neutral rounded-full mt-4 capitalize'
               scroll={false}
             >
@@ -239,7 +239,7 @@ export default function Home () {
           <div className='it-card bg-it-purple'>
             <Language />
             <p>{t('cards.language.text-one')} <span className='text-white'>{t('cards.language.text-two')}</span></p>
-            <Link href='/' locale={t('cards.language.locale') as 'en' | 'es'} className='btn w-56'>{t('cards.language.text-three')}</Link>
+            <Link href='/business-it-support' locale={t('cards.language.locale') as 'en' | 'es'} className='btn w-56'>{t('cards.language.text-three')}</Link>
           </div>
         </div>
         <img
@@ -259,7 +259,7 @@ export default function Home () {
         <p className='text-3xl leading-[87%] text-white text-center'>{t('banner.sub-title')}</p>
         <div className='w-[19rem]'>
           <Link
-            href='/request-a-call'
+            href='/business-it-support/request-a-call'
             className='w-full btn btn-active rounded-full mt-4 capitalize'
             scroll={false}
           >
@@ -299,7 +299,7 @@ export default function Home () {
               {t('future.sub-title.line-one')}<br /> {t('future.sub-title.line-two')}
             </p>
             <Link
-              href='/request-a-call'
+              href='/business-it-support/request-a-call'
               className='w-full md:max-w-[18rem] btn btn-active btn-neutral rounded-full mt-4 capitalize'
               scroll={false}
             >
