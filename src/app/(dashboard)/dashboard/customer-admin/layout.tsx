@@ -36,7 +36,7 @@ export default async function DashboardLayout ({ children }: Props) {
           <div className='w-full flex flex-col justify-start items-center overflow-hidden'>
             <div className='w-full 2xl:max-w-[1440px] h-screen flex justify-start overflow-hidden shadow-md'>
               <Sidebar />
-              <main className='relative w-full 2xl:max-w-[1440px] bg-[#E9E9E9]'>
+              <main className='relative w-full 2xl:max-w-[1440px] bg-[#E9E9E9] overflow-auto'>
                 <Navbar />
                 {children}
               </main>
