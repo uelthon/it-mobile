@@ -1,7 +1,6 @@
 import React from 'react'
+import BillingManage from './billing/page'
 
 export default function Manage () {
-  return (
-    <div>Manage</div>
-  )
+  return <BillingManage />
 }

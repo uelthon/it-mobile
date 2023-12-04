@@ -4,6 +4,7 @@ import Logo from '@/components/shared/icons/logo'
 import React from 'react'
 import SubscritionsSelector from './subscritions-selector'
 import CartProducts from './cart-products'
+import Subscribe from './subscribe'
 
 export default function Cart () {
   const products = getAllProducts()
@@ -27,9 +28,7 @@ export default function Cart () {
         <h2 className='text-[1.72rem] font-extrabold leading-[98%] text-center'>Your Subscription</h2>
         <div className='divider my-0' />
         <CartProducts />
-        <button className='btn btn-active btn-neutral rounded-full'>
-          Subscribe
-        </button>
+        <Subscribe />
       </div>
     </div>
   )
