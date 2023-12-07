@@ -1,10 +1,15 @@
 import { agreeTermsOfServices, getTermsOfServices } from '@/actions/auth.actions'
-import Download from '@/components/shared/icons/download'
 import Logo from '@/components/shared/icons/logo'
 import Submit from '@/components/shared/submit'
 import Link from 'next/link'
 import React from 'react'
 import FormTerms from './form-terms'
+import dynamic from 'next/dynamic'
+// import DownloadPdf from './download-pdf'
+
+const DownloadPdf = dynamic(async () => await import('./download-pdf'), {
+  ssr: false
+})
 
 const SubTitle = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -90,12 +95,7 @@ export default async function TermsOfServices () {
           <Content>
             The Service is provided "as is" and "as available." We make no warranties, express or implied, regarding the Service's reliability, availability, or suitability for a particular purpose.
           </Content>
-          <div className='flex items-center justify-center gap-2 font-semibold text-base text-it-blue-1'>
-            <Download />
-            <p>
-              Download Terms and Conditions
-            </p>
-          </div>
+          <DownloadPdf />
           <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
             <Link className='btn text-white bg-it-gray-2 hover:bg-it-gray-3 rounded-full capitalize' href='/'>
               Decline

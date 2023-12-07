@@ -4,7 +4,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useMemo } from 'react'
 
-export default function BillingLink () {
+interface Props {
+  company: string
+}
+
+export default function BillingLink ({ company }: Props) {
   const pathname = usePathname()
   const active = useMemo(() => {
     return ['/dashboard/customer-admin/subscriptions', '/dashboard/customer-admin/subscriptions/billing'].includes(pathname)
@@ -18,7 +22,7 @@ export default function BillingLink () {
         <Billing />
       </span>
       <p className='text-left text-lg leading-none font-light [&>span]:font-medium'>
-        <span>Billing Overview</span><br />Subscription details for Company Name
+        <span>Billing Overview</span><br />Subscription details for {company}
       </p>
     </Link>
   )

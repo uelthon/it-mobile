@@ -4,6 +4,7 @@ import Add from '@/components/shared/icons/add'
 import Link from 'next/link'
 import { getAllUserSubscriptions, getOneStripeSubscriptions } from '@/actions/subscriptions.actions'
 import BillingLink from '@/components/app/dashboard-customer-admin/billing-link'
+import { getUser } from '@/actions/auth.actions'
 
 interface Props {
   children: React.ReactNode
@@ -14,7 +15,9 @@ export default async function ManageLayout ({ children }: Props) {
   if (!data) {
     return
   }
-  const { data: stripeSubscription } = await getOneStripeSubscriptions(data[0].id)
+  const stripeSub = getOneStripeSubscriptions(data[0].id)
+  const userData = getUser()
+  const [{ data: stripeSubscription }, { data: user }] = await Promise.all([stripeSub, userData])
   return (
     <div className='w-full flex flex-col justify-start h-full bg-white sm:flex-row sm:justify-stretch'>
       <div className='w-full flex flex-col justify-start gap-4 md:max-w-md p-4'>
@@ -26,7 +29,7 @@ export default async function ManageLayout ({ children }: Props) {
           </Link>
         </div>
         <div className='flex flex-col justify-start gap-2'>
-          <BillingLink />
+          <BillingLink company={user?.user_metadata?.business_name || ''} />
           {stripeSubscription?.items.data.map(item =>
             <SubscriptionCard
               key={item.id}
