@@ -4,6 +4,9 @@ import AddItemSelector from './add-item-selector'
 
 export default async function Add () {
   const [{ data: subscriptions }, { data: unpurchasedProducts }] = await Promise.all([getAllUserSubscriptions(), getUnpurchasedUserProducts()])
+  if (!subscriptions?.length) {
+    return null
+  }
   return (
     <div className='w-full flex justify-center px-2 md:px-0 py-4'>
       <AddItemSelector productsData={unpurchasedProducts} subId={subscriptions[0].id} />

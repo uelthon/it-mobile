@@ -92,6 +92,16 @@ export const createUser = async (formData: FormData) => {
   try {
     const body = await BodyCreateUserElementSchema.parseAsync(Object.fromEntries(formData))
     const cleanPhone = cleanPhoneNumber(body.phone)
+    const { data: dataCompany, error: errorCompany } = await supabase.from('business').insert({
+      name: body.businessName
+    }).select('*').single()
+    if (errorCompany || !dataCompany) {
+      return {
+        error: errorCompany?.message || 'supabase error company',
+        data: null
+      }
+    }
+    console.log(dataCompany)
     const { data: { user }, error } = await supabase.auth.signUp({
       email: body.email,
       password: body.password,
@@ -100,6 +110,7 @@ export const createUser = async (formData: FormData) => {
           full_name: body.fullName,
           avatar_url: '',
           business_name: body.businessName,
+          business_id: dataCompany.id,
           website: body.website,
           send_emails: body?.sendEmail === 'on',
           role_id: 3,
@@ -108,6 +119,7 @@ export const createUser = async (formData: FormData) => {
       }
     })
     if (error || !user) {
+      console.log('1', error?.message)
       return {
         error: error?.message || 'supabase server error',
         data: null
@@ -121,6 +133,7 @@ export const createUser = async (formData: FormData) => {
       data: user
     }
   } catch (error) {
+    console.log('hola', error)
     if (error instanceof z.ZodError) {
       return {
         error: error.message,

@@ -55,22 +55,25 @@ export const upsertPriceRecord = async (price: Stripe.Price) => {
 
 export const createOrRetrieveCustomer = async ({
   email,
-  uuid
+  uuid,
+  businessId
 }: {
   email: string
   uuid: string
+  businessId: string
 }) => {
   const { data, error } = await supabaseAdmin
     .from('customers')
     .select('stripe_customer_id')
-    .eq('id', uuid)
+    .eq('business_id', businessId)
     .single()
   if (error || !data?.stripe_customer_id) {
     // No customer record found, let's create one.
-    const customerData: { metadata: { supabaseUUID: string }, email?: string } =
+    const customerData: { metadata: { supabaseUUID: string, businessId: string }, email?: string } =
       {
         metadata: {
-          supabaseUUID: uuid
+          supabaseUUID: uuid,
+          businessId
         }
       }
     if (email) customerData.email = email
@@ -78,7 +81,7 @@ export const createOrRetrieveCustomer = async ({
     // Now insert the customer ID into our Supabase mapping table.
     const { error: supabaseError } = await supabaseAdmin
       .from('customers')
-      .insert([{ id: uuid, stripe_customer_id: customer.id }])
+      .insert([{ id: uuid, stripe_customer_id: customer.id, business_id: businessId }])
     if (supabaseError) throw supabaseError
     console.log(`New customer created and inserted for ${uuid}.`)
     return customer.id
@@ -117,12 +120,12 @@ export const manageSubscriptionStatusChange = async (
   // Get customer's UUID from mapping table.
   const { data: customerData, error: noCustomerError } = await supabaseAdmin
     .from('customers')
-    .select('id')
+    .select('id,business_id')
     .eq('stripe_customer_id', customerId)
     .single()
   if (noCustomerError) throw noCustomerError
 
-  const { id: uuid } = customerData
+  const { id: uuid, business_id: businessId } = customerData
 
   const subscription = await stripe.subscriptions.retrieve(subscriptionId, {
     expand: ['default_payment_method']
@@ -132,6 +135,7 @@ export const manageSubscriptionStatusChange = async (
     {
       id: subscription.id,
       user_id: uuid,
+      business_id: businessId,
       metadata: subscription.metadata,
       status: subscription.status,
       price_id: subscription.items.data[0].price.id,

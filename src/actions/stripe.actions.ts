@@ -30,7 +30,8 @@ export const createSession = async () => {
   }
   const customer = await createOrRetrieveCustomer({
     email: user?.email || '',
-    uuid: user?.id || ''
+    uuid: user?.id || '',
+    businessId: user?.user_metadata?.business_id || ''
   })
   try {
     const session = await stripe.checkout.sessions.create({
@@ -81,7 +82,8 @@ export const createPortal = async () => {
   }
   const customer = await createOrRetrieveCustomer({
     uuid: user?.id || '',
-    email: user?.email || ''
+    email: user?.email || '',
+    businessId: user?.user_metadata?.business_id || ''
   })
   if (!customer) {
     return {

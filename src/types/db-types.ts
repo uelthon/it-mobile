@@ -13,20 +13,29 @@ export interface Database {
         Row: {
           id: string
           stripe_customer_id: string | null
+          business_id: string
         }
         Insert: {
           id: string
           stripe_customer_id?: string | null
+          business_id: string
         }
         Update: {
           id?: string
           stripe_customer_id?: string | null
+          business_id: string
         }
         Relationships: [
           {
             foreignKeyName: 'customers_id_fkey'
             columns: ['id']
             referencedRelation: 'users'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'subscriptions_business_id_fkey'
+            columns: ['business_id']
+            referencedRelation: 'business'
             referencedColumns: ['id']
           }
         ]
@@ -124,6 +133,7 @@ export interface Database {
           trial_end: string | null
           trial_start: string | null
           user_id: string
+          business_id: string
         }
         Insert: {
           cancel_at?: string | null
@@ -141,6 +151,7 @@ export interface Database {
           trial_end?: string | null
           trial_start?: string | null
           user_id: string
+          business_id: string
         }
         Update: {
           cancel_at?: string | null
@@ -158,6 +169,7 @@ export interface Database {
           trial_end?: string | null
           trial_start?: string | null
           user_id?: string
+          business_id: string
         }
         Relationships: [
           {
@@ -170,6 +182,12 @@ export interface Database {
             foreignKeyName: 'subscriptions_user_id_fkey'
             columns: ['user_id']
             referencedRelation: 'users'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'subscriptions_business_id_fkey'
+            columns: ['business_id']
+            referencedRelation: 'business'
             referencedColumns: ['id']
           }
         ]

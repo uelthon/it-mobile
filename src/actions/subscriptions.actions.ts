@@ -1,15 +1,21 @@
 'use server'
 import stripe from '@/libs/stripe'
-import supabaseServer from '@/libs/supabase/supabase-server'
+import supabaseAdmin from '@/libs/supabase/supabase-admin'
 import { SubscriptionUser } from '@/types/subscriptions-user.types'
-import { cookies } from 'next/headers'
 import { getAllProducts } from './products.actions'
 import { Product } from '@/types/products.types'
 import { revalidatePath } from 'next/cache'
+import { getUser } from './auth.actions'
 
 export const getAllUserSubscriptions = async () => {
-  const supabase = supabaseServer({ cookies })
-  const { data, error } = await supabase.from('subscriptions').select('*').eq('status', 'active')
+  const { data: user } = await getUser()
+  if (!user) {
+    return {
+      error: 'user missing',
+      data: null
+    }
+  }
+  const { data, error } = await supabaseAdmin.from('subscriptions').select('*').eq('business_id', user.user_metadata.business_id).eq('status', 'active')
   const subscriptions = data ? data as SubscriptionUser[] : []
   return {
     data: subscriptions,
@@ -39,7 +45,7 @@ export const getOneStripeSubscriptions = async (subId: string) => {
 export const getAllUserProducts = async () => {
   try {
     const { data: dataUserSubscriptions } = await getAllUserSubscriptions()
-    if (!dataUserSubscriptions.length) {
+    if (!dataUserSubscriptions?.length) {
       return {
         data: [''],
         error: 'user subscription not found'
